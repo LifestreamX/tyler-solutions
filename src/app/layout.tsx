@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { AnalyticsTracker } from '@/components/analytics-tracker';
 import { ThemeProvider } from '@/components/theme-provider';
+import { WebVitals } from '@/components/web-vitals';
 import { GA_MEASUREMENT_ID } from '@/lib/analytics';
 import { faqItems } from '@/lib/site-content';
 import './globals.css';
@@ -233,6 +234,7 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
           <AnalyticsTracker />
+          <WebVitals />
           <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
         </ThemeProvider>
       </body>

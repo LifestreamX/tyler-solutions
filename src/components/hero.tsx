@@ -65,8 +65,8 @@ export function Hero() {
           <FadeUp delay={0.2}>
             <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed'>
               I help businesses launch websites, improve the ones they already
-              have, strengthen online sales, add secure customer or staff
-              areas, and tighten the systems behind the scenes.
+              have, strengthen online sales, add secure customer or staff areas,
+              and tighten the systems behind the scenes.
             </p>
           </FadeUp>
 
@@ -74,11 +74,11 @@ export function Hero() {
           <FadeUp delay={0.3}>
             <div className='flex flex-col sm:flex-row gap-3'>
               <a
-                href='#contact'
+                href='#schedule'
                 onClick={() => trackBookCallClick('hero')}
                 className='btn-accent group inline-flex min-h-11 w-full items-center justify-center gap-2 rounded px-6 py-3 text-sm font-semibold text-accent-foreground sm:w-auto'
               >
-                Tell Me About Your Project
+                Book a Discovery Call
                 <ArrowRight className='h-4 w-4 group-hover:translate-x-0.5 transition-transform' />
               </a>
               <a
@@ -92,8 +92,8 @@ export function Hero() {
             </div>
 
             <p className='mt-4 text-sm text-muted-foreground'>
-              A short message is enough to get started. You don&apos;t need a full
-              brief before reaching out.
+              Book a call now, or scroll down and send a message if email is
+              easier.
             </p>
 
             <div className='mt-5 flex flex-wrap gap-2'>

@@ -11,6 +11,7 @@ import {
   trackFormSubmit,
   trackFormSubmitFailure,
   trackFormError,
+  trackBookCallClick,
   trackEmailClick,
   trackPhoneClick,
 } from '@/lib/analytics';
@@ -49,7 +50,7 @@ const contactInfo = [
 const nextSteps = [
   'I read every message myself',
   'I reply with what I would recommend next',
-  'If it looks like a fit, we can decide together what should happen after that',
+  'If it looks like a fit, I outline scope, timing, and the next step',
 ];
 
 export function Contact() {
@@ -144,19 +145,25 @@ export function Contact() {
               >
                 <span className='block'>Tell Me What You Need</span>
                 <span className='block text-accent'>
-                  I&apos;ll Tell You What Makes Sense.
+                  I&apos;ll Recommend the Best Next Step.
                 </span>
               </h2>
               <p className='text-muted-foreground leading-relaxed mb-10'>
                 If you need a new website, help with the one you already have,
                 better online sales, secure customer areas, or a tool for your
-                team, send over the details. I&apos;ll review it, tell you what
-                I&apos;d recommend, and say so if I don&apos;t think I&apos;m
-                the right fit.
+                team, send over the details. I&apos;ll review it and tell you
+                what I&apos;d recommend next.
               </p>
               <p className='mb-8 text-sm leading-relaxed text-muted-foreground'>
-                If you do not have a polished brief yet, that is fine. Send the
-                basics and I will take it from there.
+                If you only have the basics, that is enough. Send them here, or{' '}
+                <a
+                  href='#schedule'
+                  onClick={() => trackBookCallClick('contact_intro')}
+                  className='font-semibold text-foreground underline decoration-accent underline-offset-4 transition-colors hover:text-accent'
+                >
+                  book a call if talking it through would be easier
+                </a>
+                .
               </p>
 
               <div className='mb-8 rounded border border-border bg-surface p-5 shadow-sm dark:shadow-none'>
@@ -233,9 +240,8 @@ export function Contact() {
                     className='rounded border border-border bg-background px-4 py-3'
                   >
                     <p className='text-sm leading-relaxed text-muted-foreground'>
-                      If you only have a rough outline, that is fine. Share the
-                      goal, what is currently blocked, and any links or
-                      deadlines that matter.
+                      Share the goal, what is currently blocked, and any links
+                      or deadlines that matter.
                     </p>
                   </div>
 
@@ -393,11 +399,6 @@ export function Contact() {
                       </>
                     )}
                   </button>
-
-                  <p className='text-center text-xs leading-relaxed text-muted-foreground'>
-                    No pressure. If I do not think I am the right fit, I will
-                    tell you.
-                  </p>
                 </form>
               )}
             </div>

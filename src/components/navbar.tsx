@@ -12,10 +12,10 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { href: '#services', label: 'Services' },
-  { href: '#after-launch', label: 'After Launch' },
-  { href: '#work', label: 'Client Work' },
+  { href: '#work', label: 'Recent Work' },
+  { href: '#after-launch', label: 'Site Review' },
   { href: '#about', label: 'About' },
-  { href: '#stack', label: 'How I Help' },
+  { href: '#stack', label: 'Capabilities' },
   { href: '#process', label: 'Process' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -110,11 +110,11 @@ export function Navbar() {
             ))}
             <ThemeToggle />
             <a
-              href='#contact'
+              href='#schedule'
               onClick={() => trackBookCallClick('navbar')}
               className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-4 py-2 text-sm font-semibold text-accent-foreground'
             >
-              Start a Project
+              Book a Call
             </a>
           </div>
 
@@ -170,14 +170,14 @@ export function Navbar() {
                 <ThemeToggle />
               </div>
               <a
-                href='#contact'
+                href='#schedule'
                 onClick={() => {
                   setMobileOpen(false);
                   trackBookCallClick('navbar_mobile');
                 }}
                 className='btn-accent mt-8 inline-flex min-h-11 items-center justify-center rounded px-6 py-4 text-base font-semibold text-accent-foreground'
               >
-                Start a Project
+                Book a Call
               </a>
             </nav>
           </motion.div>

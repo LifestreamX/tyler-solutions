@@ -91,11 +91,14 @@ export function AnalyticsTracker() {
     const sections: Record<string, string> = {
       hero: 'Hero',
       services: 'Services',
-      work: 'Client Work',
+      work: 'Recent Work',
       trust: 'Why Clients Like Working With Me',
+      'after-launch': 'Site Review',
       about: 'About',
       stack: 'Capabilities',
       process: 'Process',
+      faq: 'FAQ',
+      schedule: 'Schedule',
       contact: 'Contact',
     };
 

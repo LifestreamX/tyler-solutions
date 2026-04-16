@@ -120,7 +120,7 @@ export function PostLaunchSupport() {
                 </p>
               </div>
               <a
-                href='#contact'
+                href='#schedule'
                 onClick={() => trackBookCallClick('post_launch_support')}
                 className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-6 py-3 text-sm font-semibold text-accent-foreground'
               >

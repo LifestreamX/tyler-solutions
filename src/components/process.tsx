@@ -43,7 +43,7 @@ const steps = [
     number: '05',
     title: 'Support After Launch',
     description:
-      'After launch I can help with updates, fixes, and the next phase if you want ongoing support.',
+      'After launch I can stay involved for updates, fixes, improvements, and the next phase as the site keeps moving forward.',
   },
 ];
 

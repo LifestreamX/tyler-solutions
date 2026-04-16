@@ -9,6 +9,7 @@ import { About } from '@/components/about';
 import { Process } from '@/components/process';
 import { Testimonials } from '@/components/testimonials';
 import { Faq } from '@/components/faq';
+import { Schedule } from '@/components/schedule';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 
@@ -64,6 +65,7 @@ export default function Home() {
         <TechStack />
         <Process />
         <Faq />
+        <Schedule />
         <Contact />
       </main>
       <Footer />

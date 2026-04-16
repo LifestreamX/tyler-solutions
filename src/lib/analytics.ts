@@ -8,15 +8,24 @@ export const GA_MEASUREMENT_ID =
 
 declare global {
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    gtag: (...args: any[]) => void;
+    dataLayer?: unknown[][];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
 /** Safe gtag caller. No-ops if GA has not loaded yet. */
 function gtagCall(command: string, ...args: unknown[]) {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  if (typeof window.gtag === 'function') {
     window.gtag(command, ...args);
+    return;
+  }
+
+  if (Array.isArray(window.dataLayer)) {
+    window.dataLayer.push([command, ...args]);
   }
 }
 
@@ -36,12 +45,6 @@ export function trackBookCallClick(location: string) {
     event_label: `book_call_from_${location}`,
     section: location,
     value: 1,
-  });
-
-  gtagCall('event', 'generate_lead', {
-    currency: 'USD',
-    value: 0,
-    source: location,
   });
 }
 
@@ -189,13 +192,6 @@ export function trackEmailClick(source: string) {
     event_category: 'Contact',
     event_label: `email_from_${source}`,
   });
-
-  gtagCall('event', 'generate_lead', {
-    currency: 'USD',
-    value: 0,
-    method: 'email_click',
-    source,
-  });
 }
 
 /** Phone link click. */
@@ -204,12 +200,83 @@ export function trackPhoneClick(source: string) {
     event_category: 'Contact',
     event_label: `phone_from_${source}`,
   });
+}
+
+function readNestedString(
+  value: unknown,
+  ...keys: string[]
+): string | undefined {
+  let current = value;
+
+  for (const key of keys) {
+    if (typeof current !== 'object' || current === null || !(key in current)) {
+      return undefined;
+    }
+
+    current = (current as Record<string, unknown>)[key];
+  }
+
+  return typeof current === 'string' && current.length > 0
+    ? current
+    : undefined;
+}
+
+/** Calendly widget becomes visible to the user. */
+export function trackScheduleWidgetView() {
+  gtagCall('event', 'schedule_widget_view', {
+    event_category: 'Scheduling',
+    event_label: 'calendly_profile_page_viewed',
+    provider: 'calendly',
+    source: 'schedule_section',
+  });
+}
+
+/** Calendly event type is opened inside the embed. */
+export function trackScheduleEventTypeView() {
+  gtagCall('event', 'schedule_event_type_view', {
+    event_category: 'Scheduling',
+    event_label: 'calendly_event_type_viewed',
+    provider: 'calendly',
+    source: 'schedule_section',
+  });
+}
+
+/** User picks a date/time inside the Calendly embed. */
+export function trackScheduleDateTimeSelected() {
+  gtagCall('event', 'schedule_date_time_selected', {
+    event_category: 'Scheduling',
+    event_label: 'calendly_date_and_time_selected',
+    provider: 'calendly',
+    source: 'schedule_section',
+  });
+}
+
+/** Confirmed scheduling conversion from Calendly. */
+export function trackScheduleBooked(payload?: unknown) {
+  const scheduledEventName =
+    readNestedString(payload, 'event', 'name') ??
+    readNestedString(payload, 'event_type', 'name');
+  const scheduledEventUri =
+    readNestedString(payload, 'event', 'uri') ??
+    readNestedString(payload, 'event_type', 'uri');
+  const inviteeUri = readNestedString(payload, 'invitee', 'uri');
+
+  gtagCall('event', 'schedule_meeting_booked', {
+    event_category: 'Scheduling',
+    event_label: scheduledEventName ?? 'calendly_event_scheduled',
+    provider: 'calendly',
+    source: 'schedule_section',
+    ...(scheduledEventName ? { scheduled_event_name: scheduledEventName } : {}),
+    ...(scheduledEventUri ? { scheduled_event_uri: scheduledEventUri } : {}),
+    ...(inviteeUri ? { invitee_uri: inviteeUri } : {}),
+  });
 
   gtagCall('event', 'generate_lead', {
     currency: 'USD',
     value: 0,
-    method: 'phone_click',
-    source,
+    method: 'calendly',
+    source: 'schedule_section',
+    ...(scheduledEventName ? { scheduled_event_name: scheduledEventName } : {}),
   });
 }
 
@@ -249,6 +316,36 @@ export function trackTimeOnPage(seconds: number) {
     event_category: 'Engagement',
     event_label: `${seconds}s`,
     seconds_on_page: seconds,
+    non_interaction: true,
+  });
+}
+
+type WebVitalMetric = {
+  name: string;
+  id: string;
+  value: number;
+  rating?: 'good' | 'needs-improvement' | 'poor';
+  delta?: number;
+  navigationType?: string;
+};
+
+/** Core Web Vitals and page performance telemetry for GA4. */
+export function trackWebVital(metric: WebVitalMetric) {
+  const normalizeValue = (value: number) =>
+    Math.round(metric.name === 'CLS' ? value * 1000 : value);
+
+  gtagCall('event', 'web_vital', {
+    event_category: 'Web Vitals',
+    event_label: metric.id,
+    metric_name: metric.name,
+    metric_id: metric.id,
+    metric_rating: metric.rating ?? 'unknown',
+    metric_navigation_type: metric.navigationType ?? 'unknown',
+    metric_value: normalizeValue(metric.value),
+    ...(metric.delta !== undefined
+      ? { metric_delta: normalizeValue(metric.delta) }
+      : {}),
+    value: normalizeValue(metric.value),
     non_interaction: true,
   });
 }

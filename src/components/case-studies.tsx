@@ -235,7 +235,7 @@ export function CaseStudies() {
         <FadeUp delay={0.2}>
           <div className='mt-8 flex justify-center sm:mt-10'>
             <a
-              href='#contact'
+              href='#schedule'
               onClick={() => trackBookCallClick('case_studies')}
               className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-6 py-3 text-sm font-semibold text-accent-foreground'
             >

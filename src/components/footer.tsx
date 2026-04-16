@@ -32,6 +32,7 @@ const footerLinks = [
   { label: 'How I Help', href: '#stack' },
   { label: 'Client Work', href: '#work' },
   { label: 'Process', href: '#process' },
+  { label: 'Book a Call', href: '#schedule' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
