@@ -34,25 +34,25 @@ const caseStudies: CaseStudy[] = [
   {
     tag: 'Team Operations',
     num: '01',
-    title: 'Secure Communication and Billing Hub',
-    role: 'Handled planning, design, build, and launch',
+    title: 'Client Communication and Billing Hub',
+    role: 'Planned, designed, built, and launched the full system',
     period: '2024 to Present',
     description:
-      'Built a secure online workspace that brought client communication, account management, and billing into one place for the team.',
+      'Built a private online area that brought customer communication, login access, and billing into one place for the business.',
     outcomes: [
-      'Made follow-up easier for both staff and clients',
-      'Reduced manual admin work with import tools and account controls',
-      'Let customers handle billing inside the same system',
-      'Kept access organized so the right people saw the right information',
-      'Improved day-to-day usability for both staff and clients',
+      'Made it easier for staff and clients to keep communication in one place',
+      'Reduced back-and-forth and repetitive office work',
+      'Let customers view accounts and handle billing in the same space',
+      'Kept the right information visible to the right people',
+      'Made everyday account management easier for the team',
     ],
     included: [
-      'Client messaging',
-      'Billing',
-      'Account management',
-      'Admin tools',
-      'Permissions',
-      'Reporting',
+      'Secure messaging',
+      'Subscription billing',
+      'Private account area',
+      'Invites and permissions',
+      'Staff tools',
+      'Business reporting',
     ],
     accent: 'blue',
   },
@@ -65,43 +65,43 @@ const caseStudies: CaseStudy[] = [
     description:
       'Stepped into an online store that was losing sales because of speed and checkout problems, then stabilized and improved it so the business could keep growing.',
     outcomes: [
-      'Fixed checkout problems that were getting in the way of sales',
-      'Improved page speed to help more shoppers reach checkout',
-      'Connected advertising and conversion tracking for clearer reporting',
-      'Added wholesale and affiliate support as new sales channels',
-      'Added automation and support tools to make the store easier to run',
+      'Removed checkout problems that were blocking sales',
+      'Improved site speed so more shoppers could complete purchases',
+      'Set up clearer marketing and sales reporting',
+      'Added wholesale and partner-friendly features',
+      'Made the store easier to manage day to day',
     ],
     included: [
-      'Storefront updates',
-      'Checkout repairs',
-      'Tracking and reporting',
-      'Store migration',
-      'Performance work',
-      'Sales channels',
+      'Store updates',
+      'Checkout fixes',
+      'Sales reports',
+      'Store move',
+      'Speed improvements',
+      'Wholesale and partner sales',
     ],
     accent: 'violet',
   },
   {
     tag: 'Custom Product',
     num: '03',
-    title: 'Guided Search Experience',
-    role: 'Built under contract from idea to live product',
+    title: 'Guided Search and Recommendation Experience',
+    role: 'Took a client concept from idea to live product',
     period: 'Jan 2024 to Jun 2024',
     description:
-      'Designed and launched a web product that helped users narrow options and find the right match faster.',
+      'Built a web experience that helped people narrow their options and reach the right choice faster.',
     outcomes: [
-      'Moved the product from concept to live launch',
-      'Built a search flow that made results easier to understand',
-      'Added validation and error handling to make the experience more reliable',
-      'Made the experience work cleanly across mobile, tablet, and desktop',
-      'Set up the product so it could be maintained and expanded over time',
+      'Moved the idea from planning to live launch',
+      'Created a clearer step-by-step search experience',
+      'Made the experience more reliable when people entered the wrong information',
+      'Made it work cleanly across phone, tablet, and desktop',
+      'Left the product easy to update and expand over time',
     ],
     included: [
-      'Search experience',
-      'Responsive design',
-      'Data setup',
-      'User accounts',
-      'Validation',
+      'Search flow',
+      'Mobile-friendly design',
+      'Content setup',
+      'Logins and access',
+      'Reliability improvements',
       'Launch support',
     ],
     accent: 'emerald',
@@ -127,8 +127,8 @@ export function CaseStudies() {
               Recent Client Work
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              A few examples of work that improved sales, operations, or the
-              customer experience.
+              A few examples of work that made it easier to sell, serve
+              customers, or run the business.
             </p>
           </div>
         </FadeUp>
@@ -209,7 +209,7 @@ export function CaseStudies() {
                           {/* Tech */}
                           <div>
                             <h4 className='font-mono text-[10px] text-muted-foreground uppercase tracking-widest mb-3'>
-                              Scope of Work
+                              Included
                             </h4>
                             <ul className='flex flex-wrap gap-1.5' role='list'>
                               {study.included.map((item) => (
@@ -239,7 +239,7 @@ export function CaseStudies() {
               onClick={() => trackBookCallClick('case_studies')}
               className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-6 py-3 text-sm font-semibold text-accent-foreground'
             >
-              Talk Through Your Project
+              See If I Can Help
             </a>
           </div>
         </FadeUp>

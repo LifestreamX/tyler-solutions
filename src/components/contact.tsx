@@ -46,6 +46,12 @@ const contactInfo = [
   },
 ];
 
+const nextSteps = [
+  'I read every message myself',
+  'I reply with the best next step and whether it feels like a fit',
+  'If it makes sense, we can set up a call after that',
+];
+
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const formStarted = useRef(false);
@@ -136,19 +142,37 @@ export function Contact() {
                 id='contact-heading'
                 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6'
               >
-                <span className='block'>Tell Me What You</span>
-                <span className='block text-accent'>Need Help With.</span>
+                <span className='block'>Tell Me What You Need</span>
+                <span className='block text-accent'>Built or Fixed.</span>
               </h2>
               <p className='text-muted-foreground leading-relaxed mb-10'>
-                If you need something new, help fixing an existing site, or
-                better tools for your team, send the details. I&rsquo;ll review
-                it, talk through the best next step, and be direct if I&rsquo;m
-                not the right fit.
+                If you need a new website, help with an existing one, better
+                online sales, a private customer area, clearer tracking, or a
+                tool for your team, send the details. I&rsquo;ll review it, talk
+                through the best next step, and be direct if I&rsquo;m not the
+                right fit.
               </p>
               <p className='mb-8 text-sm leading-relaxed text-muted-foreground'>
-                A short message is enough to get started. You can send the
-                problem, the goal, or a link to what you already have.
+                Even a short message is enough. You do not need a full plan, big
+                brief, or polished project outline before reaching out.
               </p>
+
+              <div className='mb-8 rounded border border-border bg-surface p-5 shadow-sm dark:shadow-none'>
+                <p className='mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground'>
+                  What Happens Next
+                </p>
+                <ul className='space-y-2.5' role='list'>
+                  {nextSteps.map((step) => (
+                    <li
+                      key={step}
+                      className='flex items-start gap-2.5 text-sm leading-relaxed text-muted-foreground'
+                    >
+                      <span className='mt-2 h-1 w-3 shrink-0 bg-accent' />
+                      {step}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               {/* Contact details */}
               <div className='space-y-3'>
@@ -191,7 +215,8 @@ export function Contact() {
                     Message Sent!
                   </h3>
                   <p className='text-muted-foreground'>
-                    Thanks. I received your note and will get back to you soon.
+                    Thanks. I received your note and will reply with next steps
+                    soon.
                   </p>
                 </div>
               ) : (
@@ -201,6 +226,14 @@ export function Contact() {
                   aria-busy={isSubmitting}
                   noValidate
                 >
+                  <div className='rounded border border-border bg-background px-4 py-3'>
+                    <p className='text-sm leading-relaxed text-muted-foreground'>
+                      A few sentences is enough. The most helpful things to
+                      include are what you need, what is not working, and any
+                      timing or links you already have.
+                    </p>
+                  </div>
+
                   {/* Name */}
                   <div>
                     <label
@@ -297,7 +330,7 @@ export function Contact() {
                       htmlFor='message'
                       className='block text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2'
                     >
-                      Project Overview{' '}
+                      What would you like help with?{' '}
                       <span className='text-destructive'>*</span>
                     </label>
                     <textarea
@@ -307,7 +340,7 @@ export function Contact() {
                       {...register('message')}
                       onFocus={handleFormInteraction}
                       className={`${inputClass} resize-none`}
-                      placeholder='Describe what you need, what is not working, and any timing or links that would help me understand the project.'
+                      placeholder='A few sentences is enough. Tell me what you need, what is not working, and any timing, links, or examples that would help.'
                       aria-describedby={
                         errors.message ? 'message-error' : undefined
                       }
@@ -347,7 +380,7 @@ export function Contact() {
                       </>
                     ) : (
                       <>
-                        Send Project Details
+                        Send My Message
                         <Send className='h-4 w-4 group-hover:translate-x-1 transition-transform' />
                       </>
                     )}

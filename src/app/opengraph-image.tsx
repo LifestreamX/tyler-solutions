@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const alt =
-  'Tyler Allen websites, store improvements, and tools for teams';
+  'Tyler Allen Solutions websites, store support, private customer areas, and business tools';
 
 export const size = {
   width: 1200,
@@ -60,7 +60,7 @@ export default function OpenGraphImage() {
               width: 12,
             }}
           />
-          Websites and Team Tools
+          Websites, Stores, and Support
         </div>
 
         <div
@@ -80,8 +80,8 @@ export default function OpenGraphImage() {
               lineHeight: 1.02,
             }}
           >
-            Tyler Allen builds websites, improves stores, and creates tools for
-            growing teams.
+            Tyler Allen builds websites, improves stores, and creates private
+            customer areas and business tools for growing companies.
           </div>
           <div
             style={{
@@ -91,8 +91,8 @@ export default function OpenGraphImage() {
               lineHeight: 1.35,
             }}
           >
-            Direct communication, dependable delivery, and practical solutions
-            built around how your business works day to day.
+            Clear communication, dependable delivery, and practical help before
+            and after launch.
           </div>
         </div>
 
@@ -104,10 +104,10 @@ export default function OpenGraphImage() {
           }}
         >
           <div style={{ color: '#e2e8f0', display: 'flex', fontSize: 24 }}>
-            tyler-allen.com
+            solutions.tyler-allen.com
           </div>
           <div style={{ display: 'flex', gap: 14 }}>
-            {['Build', 'Improve', 'Support'].map((label) => (
+            {['Launch', 'Improve', 'Support'].map((label) => (
               <div
                 key={label}
                 style={{

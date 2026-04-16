@@ -7,56 +7,61 @@ const services = [
   {
     icon: LayoutGrid,
     tag: '01',
-    title: 'New Websites and Online Stores',
+    title: 'New Websites, Sales Pages, and Online Stores',
     description:
-      'I can take a project from idea to launch, including the site design, build, checkout setup, and the customer experience around it.',
+      'If you need a new website, a page built to bring in inquiries, or a better online sales experience, I can handle the planning, design, setup, and launch.',
     features: [
-      'Marketing sites and landing pages',
+      'Business websites and service pages',
       'Online stores with product, cart, and checkout setup',
-      'Customer logins and team tools',
-      'Built to load fast, work well on mobile, and stay easy to manage',
+      'Private customer areas and logins',
+      'Mobile-friendly pages your team can update',
     ],
   },
   {
     icon: Wrench,
     tag: '02',
-    title: 'Fixes and Improvements for Existing Sites',
+    title: 'Fixes, Updates, and Growth Improvements',
     description:
-      'If your current site or store is outdated, broken, slow, or hard to manage, I can improve it without pushing a rebuild unless that is truly the better choice.',
+      'If the site you have now is outdated, difficult to manage, or costing you leads or sales, I can improve it without pushing a full rebuild unless that is truly the best move.',
     features: [
       'Design refreshes and content updates',
-      'Fixes for slow pages, forms, and sales tracking',
-      'Checkout improvements to reduce drop-off',
-      'Moves to a better setup when the current one is holding you back',
+      'Fixes for slow pages, broken forms, and checkout problems',
+      'Tracking and reports so you can see what is working',
+      'Moves to a better platform if the current setup is holding you back',
     ],
   },
   {
     icon: Settings2,
     tag: '03',
-    title: 'Team Tools and Better Workflows',
+    title: 'Internal Tools, Automations, and Time-Saving Systems',
     description:
-      'I also build the tools behind the scenes that help teams save time, reduce manual work, and see what is happening more clearly.',
+      'I also build the behind-the-scenes tools that help teams save time, stay organized, and stop doing repetitive work by hand.',
     features: [
-      'Dashboards and reports for day-to-day visibility',
-      'Admin areas and team logins',
-      'Connections between the tools you already use',
-      'Organized access that stays easy to manage',
+      'Internal tools and simple reports',
+      'Secure logins, invites, and permission setup',
+      'Automations between forms, email, payments, and other tools',
+      'Tools built around how your business already works',
     ],
   },
 ];
 
 const alsoAvailable = [
-  'Accessibility reviews and fixes',
-  'Reporting dashboards',
-  'Analytics and conversion tracking',
+  'Accessibility and easier site use',
+  'Lead tracking and reports',
+  'Google Business Profile help',
   'Payments and subscriptions',
-  'Shopify and WordPress help',
-  'Email setups and third-party connections',
-  'Hosting and performance setup',
-  'Security and compliance reviews',
-  'Content updates and maintenance',
-  'AI chatbot and support tools',
+  'Shopify and WordPress support',
+  'Email and software connections',
+  'CRM and marketing automation',
+  'Data imports and cleanup',
+  'Speed improvements',
+  'Security, backups, and maintenance',
+  'Content updates',
+  'AI chat and support tools',
   'Platform migrations',
+  'Wholesale and partner sales setup',
+  'Sensitive or compliance-aware workflows',
+  'Site reviews and improvement plans',
   'Ongoing support',
 ];
 
@@ -79,9 +84,10 @@ export function Services() {
               What Clients Usually Hire Me For
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Most projects fall into one of these buckets: something new,
-              improvements to what already exists, or better tools behind the
-              scenes.
+              Whether you need something customer-facing, help behind the
+              scenes, or improvements to what you already have, I can usually
+              step in without turning it into a bigger project than it needs to
+              be.
             </p>
           </div>
         </FadeUp>

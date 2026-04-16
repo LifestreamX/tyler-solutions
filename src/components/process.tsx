@@ -15,28 +15,28 @@ const steps = [
     number: '01',
     title: 'Initial Conversation',
     description:
-      'We talk through what you need, what is getting in the way, and what a good outcome should look like.',
+      'We talk through what you need, what is getting in the way, and what success should look like.',
   },
   {
     icon: Search,
     number: '02',
-    title: 'Plan and Proposal',
+    title: 'Plan, Timeline, and Price',
     description:
-      'I send back the recommended scope, timeline, and cost so you can decide with clear expectations.',
+      'I send back the recommended plan, timeline, and cost so you can make a decision with clear expectations.',
   },
   {
     icon: FileCode2,
     number: '03',
-    title: 'Build and Review',
+    title: 'Build With Check-Ins',
     description:
       'I build in stages and share progress as we go so feedback happens early and the project stays visible.',
   },
   {
     icon: Rocket,
     number: '04',
-    title: 'Launch',
+    title: 'Launch and Final Checks',
     description:
-      'Before launch I handle testing, mobile checks, performance, tracking, and accessibility so the work is ready to go live.',
+      'Before launch I check how it looks on phones, whether forms work, how fast pages load, and whether the right tracking is in place.',
   },
   {
     icon: Headphones,
@@ -66,8 +66,8 @@ export function Process() {
               How We Work Together
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Simple, clear, and built to keep the work moving without
-              unnecessary back-and-forth.
+              Straightforward, visible, and built to keep the work moving
+              without confusion.
             </p>
           </div>
         </FadeUp>

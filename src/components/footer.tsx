@@ -28,7 +28,8 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 const footerLinks = [
   { label: 'Services', href: '#services' },
-  { label: 'Capabilities', href: '#stack' },
+  { label: 'After Launch', href: '#after-launch' },
+  { label: 'How I Help', href: '#stack' },
   { label: 'Client Work', href: '#work' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
@@ -57,12 +58,13 @@ export function Footer() {
               aria-label='Back to top'
             >
               <span className='font-bold text-foreground tracking-tight'>
-                Tyler Allen
+                Tyler Allen Solutions
               </span>
             </a>
             <p className='text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed'>
-              Websites, store improvements, and tools for teams built with
-              direct communication and dependable delivery.
+              Websites, online stores, private customer areas, internal tools,
+              and ongoing support built with clear communication and dependable
+              delivery.
             </p>
           </div>
 

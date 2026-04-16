@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    host: 'https://tyler-allen.com',
-    sitemap: 'https://tyler-allen.com/sitemap.xml',
+    host: 'https://solutions.tyler-allen.com',
+    sitemap: 'https://solutions.tyler-allen.com/sitemap.xml',
   };
 }

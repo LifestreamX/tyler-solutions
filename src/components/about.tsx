@@ -5,16 +5,17 @@ import { FadeUp, StaggerContainer, ScaleIn } from '@/lib/motion';
 import { BriefcaseBusiness, CheckSquare } from 'lucide-react';
 
 const promises = [
-  'Direct communication from planning through launch',
-  'Clear updates while work is active',
-  'Transparent scope and pricing before work begins',
-  'Something that stays easy to update after launch',
+  'Clear communication in plain language from planning through launch',
+  'Clear updates and next steps while work is active',
+  'Clear plan and pricing before work begins',
+  'Something useful your business can keep building on',
 ];
 
 const goodFit = [
-  'You want one person to own the work from start to finish',
-  'Your current site or store needs fixes before a full rebuild',
-  'Your team is losing time to manual work or scattered tools',
+  'You want one person to handle the work from start to finish',
+  'Your current site or store needs improvements before a full rebuild',
+  'Your team is wasting time in emails, spreadsheets, or disconnected tools',
+  'You want clear advice, not confusing explanations',
 ];
 
 export function About() {
@@ -26,10 +27,8 @@ export function About() {
     >
       <div className='max-w-7xl mx-auto px-6 lg:px-8'>
         <div className='grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16'>
-          {/* Left - Photo + Bio */}
           <div className='lg:col-span-3'>
             <FadeUp>
-              {/* Photo */}
               <div className='relative mb-8 w-fit sm:mb-10 mx-auto lg:mx-0'>
                 <Image
                   src='/tyler.jpeg'
@@ -50,39 +49,36 @@ export function About() {
                 id='about-heading'
                 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6'
               >
-                <span className='block'>
-                  One Partner From Planning to Launch.
-                </span>
-                <span className='block text-accent'>No agency hand-offs.</span>
+                <span className='block'>One Person Who Can Take It</span>
+                <span className='block text-accent'>From Plan to Launch.</span>
               </h2>
               <div className='space-y-5 text-muted-foreground leading-relaxed text-sm lg:text-base'>
                 <p>
                   I work directly with business owners who need a new website, a
-                  better-performing store, or a custom tool for their team. I
-                  handle planning, design, build, and launch, so the project
-                  stays clear, accountable, and easy to move forward.
+                  better online store, a private customer area, or a custom tool
+                  that saves time. I handle the planning, design, build, and
+                  launch so the project stays clear and easy to move forward.
                 </p>
                 <p>
-                  I have worked across online stores, service businesses,
-                  customer logins, reporting dashboards, and custom web tools.
-                  That range helps me connect the customer-facing side of a
-                  business with the day-to-day work happening behind it.
+                  I have worked across service business sites, online stores,
+                  healthcare and other sensitive workflows, private account
+                  areas, subscriptions, internal tools, automations, and
+                  after-launch improvements. That range helps me connect what
+                  customers see with what your team has to handle behind the
+                  scenes.
                 </p>
                 <p>
                   Clients usually come to me because they want direct
-                  communication, practical thinking, and one person who can stay
-                  accountable from the first plan through launch and later
-                  improvements. No layers of account managers, no hand-offs, and
-                  no confusion about who owns the outcome.
+                  communication, practical advice, and one person who stays
+                  responsible for the work. No agency layers, no hand-offs, and
+                  no confusion about who is doing what.
                 </p>
               </div>
             </FadeUp>
           </div>
 
-          {/* Right - Credentials */}
           <div className='lg:col-span-2'>
             <StaggerContainer className='space-y-3'>
-              {/* Commitments */}
               <ScaleIn>
                 <div className='card-workstation p-6'>
                   <div className='flex items-center gap-3 mb-4'>
@@ -94,13 +90,13 @@ export function About() {
                     </span>
                   </div>
                   <ul className='space-y-2.5' role='list'>
-                    {promises.map((p) => (
+                    {promises.map((promise) => (
                       <li
-                        key={p}
+                        key={promise}
                         className='flex items-start gap-2.5 text-xs text-muted-foreground'
                       >
                         <span className='mt-1.5 h-1 w-3 shrink-0 bg-accent' />
-                        {p}
+                        {promise}
                       </li>
                     ))}
                   </ul>

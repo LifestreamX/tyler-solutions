@@ -9,10 +9,11 @@ import {
 } from '@/lib/analytics';
 
 const servicePills = [
-  'New websites',
-  'Site improvements',
-  'Team tools',
-  'Ongoing support',
+  'Business websites',
+  'Online store help',
+  'Private customer areas',
+  'Internal tools and automations',
+  'After-launch support',
 ];
 
 export function Hero() {
@@ -50,10 +51,12 @@ export function Hero() {
               id='hero-heading'
               className='text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-foreground'
             >
-              <span className='block'>Websites, store improvements,</span>
-              <span className='block'>and internal tools</span>
+              <span className='block'>Websites, online stores,</span>
+              <span className='block'>
+                private customer areas, and business tools
+              </span>
               <span className='block text-accent'>
-                that make the business easier to run.
+                that help your company run better.
               </span>
             </h1>
           </FadeUp>
@@ -61,9 +64,10 @@ export function Hero() {
           {/* Subheadline */}
           <FadeUp delay={0.2}>
             <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed'>
-              If you need something new, help fixing what already exists, or
-              better tools behind the scenes, I handle the work directly with
-              clear communication from the first plan through launch.
+              I help businesses launch new websites, improve existing ones,
+              support online sales, create private customer or team areas, and
+              keep things moving with better tracking, speed, and simpler
+              systems behind the scenes.
             </p>
           </FadeUp>
 
@@ -75,7 +79,7 @@ export function Hero() {
                 onClick={() => trackBookCallClick('hero')}
                 className='btn-accent group inline-flex min-h-11 w-full items-center justify-center gap-2 rounded px-6 py-3 text-sm font-semibold text-accent-foreground sm:w-auto'
               >
-                Book a Call
+                Tell Me About Your Project
                 <ArrowRight className='h-4 w-4 group-hover:translate-x-0.5 transition-transform' />
               </a>
               <a
@@ -84,9 +88,14 @@ export function Hero() {
                 className='inline-flex min-h-11 w-full items-center justify-center gap-2 rounded border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-all duration-300 hover:-translate-y-px hover:border-accent/50 hover:shadow-md dark:shadow-none dark:hover:shadow-none sm:w-auto'
               >
                 <Code2 className='h-4 w-4 text-muted-foreground' />
-                View Client Work
+                View Recent Work
               </a>
             </div>
+
+            <p className='mt-4 text-sm text-muted-foreground'>
+              A short message is enough to get started. You do not need a full
+              brief before reaching out.
+            </p>
 
             <div className='mt-5 flex flex-wrap gap-2'>
               {servicePills.map((pill) => (
@@ -105,24 +114,24 @@ export function Hero() {
             <div className='mt-14 grid grid-cols-1 gap-3 border-t border-surface pt-6 sm:mt-16 sm:pt-8 sm:grid-cols-2'>
               {[
                 {
-                  title: 'Direct communication',
+                  title: 'One point of contact',
                   description:
-                    'You work with me from the first conversation through launch.',
+                    'You work with me directly from the first conversation through launch.',
                 },
                 {
-                  title: 'Clear scope',
+                  title: 'Clear pricing and next steps',
                   description:
-                    'You get priorities, cost, and next steps before work starts.',
+                    'You know what is being done, what it costs, and what comes next before work begins.',
                 },
                 {
-                  title: 'New or existing work',
+                  title: 'New projects or improvements',
                   description:
-                    'I can build from scratch or improve what you already have.',
+                    'I can build something new or improve what is already in place without forcing a full rebuild.',
                 },
                 {
                   title: 'Support after launch',
                   description:
-                    'If you need updates later, I can stay involved.',
+                    'If you need updates, fixes, or the next phase later, I can stay involved.',
                 },
               ].map((point) => (
                 <div

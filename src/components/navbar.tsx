@@ -12,9 +12,10 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { href: '#services', label: 'Services' },
+  { href: '#after-launch', label: 'After Launch' },
   { href: '#work', label: 'Client Work' },
   { href: '#about', label: 'About' },
-  { href: '#stack', label: 'Capabilities' },
+  { href: '#stack', label: 'How I Help' },
   { href: '#process', label: 'Process' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -92,7 +93,7 @@ export function Navbar() {
             aria-label='Back to top'
             className='inline-flex min-h-11 items-center text-foreground font-bold tracking-tight transition-colors hover:text-accent'
           >
-            Tyler Allen
+            Tyler Allen Solutions
           </a>
 
           {/* Desktop Nav */}
@@ -113,7 +114,7 @@ export function Navbar() {
               onClick={() => trackBookCallClick('navbar')}
               className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-4 py-2 text-sm font-semibold text-accent-foreground'
             >
-              Book a Call
+              Get in Touch
             </a>
           </div>
 
@@ -176,7 +177,7 @@ export function Navbar() {
                 }}
                 className='btn-accent mt-8 inline-flex min-h-11 items-center justify-center rounded px-6 py-4 text-base font-semibold text-accent-foreground'
               >
-                Book a Call
+                Get in Touch
               </a>
             </nav>
           </motion.div>

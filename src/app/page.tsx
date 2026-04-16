@@ -2,40 +2,44 @@ import type { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Hero } from '@/components/hero';
 import { Services } from '@/components/services';
+import { PostLaunchSupport } from '@/components/post-launch-support';
 import { TechStack } from '@/components/tech-stack';
 import { CaseStudies } from '@/components/case-studies';
 import { About } from '@/components/about';
 import { Process } from '@/components/process';
 import { Testimonials } from '@/components/testimonials';
+import { Faq } from '@/components/faq';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'Websites, Store Improvements, and Internal Tools',
+  title: {
+    absolute: 'Tyler Allen Solutions | Websites and Business Tools',
+  },
   description:
-    'New websites, store improvements, and internal tools for business owners who want direct communication and dependable delivery.',
+    'Business websites, online store improvements, private customer areas, and custom business tools, plus after-launch help with tracking, speed, and updates.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Websites, Store Improvements, and Internal Tools',
+    title: 'Tyler Allen Solutions | Websites and Business Tools',
     description:
-      'Tyler Allen helps businesses launch websites, improve stores, and build internal tools that make day-to-day work easier.',
+      'Tyler Allen helps businesses launch websites, improve online stores, create private customer areas, and keep things improving after launch.',
     url: '/',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Tyler Allen websites, store improvements, and internal tools',
+        alt: 'Tyler Allen Solutions websites, store support, private customer areas, and business tools',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tyler Allen | Websites, Store Improvements, and Internal Tools',
+    title: 'Tyler Allen Solutions | Websites and Business Tools',
     description:
-      'New websites, store improvements, and internal tools built with direct communication and practical delivery.',
+      'Business websites, store support, private customer areas, and business tools with practical after-launch help when needed.',
     images: ['/twitter-image'],
   },
 };
@@ -53,11 +57,13 @@ export default function Home() {
       <main id='main-content' className='section-stack flex-1'>
         <Hero />
         <Services />
+        <PostLaunchSupport />
         <CaseStudies />
         <Testimonials />
         <About />
         <TechStack />
         <Process />
+        <Faq />
         <Contact />
       </main>
       <Footer />
