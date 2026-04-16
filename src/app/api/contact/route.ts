@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const defaultFromAddress = 'Contact Form <onboarding@resend.dev>';
-
 function escapeHtml(value: string) {
   return value
     .replaceAll('&', '&amp;')
@@ -47,12 +45,10 @@ export async function POST(request: Request) {
       );
     }
 
-    const resendFrom = process.env.RESEND_FROM?.trim() || defaultFromAddress;
-    const resendTestEmail = process.env.RESEND_TEST_EMAIL?.trim();
-    const usingTestingSender = resendFrom.includes('onboarding@resend.dev');
-    const destinationEmail = usingTestingSender
-      ? resendTestEmail || contactEmail
-      : contactEmail;
+    // For production, you should use a verified sender address (RESEND_FROM) for the 'from' field.
+    // For simple setups, CONTACT_EMAIL can be used if it is a verified sender in Resend.
+    const resendFrom = contactEmail;
+    const destinationEmail = contactEmail;
 
     const resend = new Resend(resendApiKey);
 
@@ -94,17 +90,9 @@ export async function POST(request: Request) {
         message: resendMessage,
       });
 
-      const configurationHint =
-        usingTestingSender && !resendTestEmail
-          ? ' Add RESEND_TEST_EMAIL for local testing, or verify a domain in Resend and set RESEND_FROM to that domain.'
-          : '';
-
       return NextResponse.json(
         {
-          error:
-            process.env.NODE_ENV === 'production'
-              ? 'Failed to send email'
-              : `${resendMessage}${configurationHint}`,
+          error: 'Failed to send email',
         },
         { status: 500 },
       );
