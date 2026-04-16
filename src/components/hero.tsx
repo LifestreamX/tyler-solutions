@@ -11,9 +11,9 @@ import {
 const servicePills = [
   'Business websites',
   'Online store help',
-  'Private customer areas',
+  'Secure customer areas',
   'Internal tools and automations',
-  'After-launch support',
+  'Ongoing support',
 ];
 
 export function Hero() {
@@ -53,10 +53,10 @@ export function Hero() {
             >
               <span className='block'>Websites, online stores,</span>
               <span className='block'>
-                private customer areas, and business tools
+                secure customer areas, and business tools
               </span>
               <span className='block text-accent'>
-                that help your company run better.
+                that help your business run better.
               </span>
             </h1>
           </FadeUp>
@@ -64,10 +64,9 @@ export function Hero() {
           {/* Subheadline */}
           <FadeUp delay={0.2}>
             <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed'>
-              I help businesses launch new websites, improve existing ones,
-              support online sales, create private customer or team areas, and
-              keep things moving with better tracking, speed, and simpler
-              systems behind the scenes.
+              I help businesses launch websites, improve the ones they already
+              have, strengthen online sales, add secure customer or staff
+              areas, and tighten the systems behind the scenes.
             </p>
           </FadeUp>
 
@@ -93,7 +92,7 @@ export function Hero() {
             </div>
 
             <p className='mt-4 text-sm text-muted-foreground'>
-              A short message is enough to get started. You do not need a full
+              A short message is enough to get started. You don&apos;t need a full
               brief before reaching out.
             </p>
 
@@ -114,24 +113,24 @@ export function Hero() {
             <div className='mt-14 grid grid-cols-1 gap-3 border-t border-surface pt-6 sm:mt-16 sm:pt-8 sm:grid-cols-2'>
               {[
                 {
-                  title: 'One point of contact',
+                  title: 'Direct communication',
                   description:
                     'You work with me directly from the first conversation through launch.',
                 },
                 {
-                  title: 'Clear pricing and next steps',
+                  title: 'Clear plan and pricing',
                   description:
-                    'You know what is being done, what it costs, and what comes next before work begins.',
+                    'Before work starts, you know what is being done, what it costs, and what the next step is.',
                 },
                 {
-                  title: 'New projects or improvements',
+                  title: 'New builds or targeted fixes',
                   description:
-                    'I can build something new or improve what is already in place without forcing a full rebuild.',
+                    'I can build something new or improve what you already have without forcing a full rebuild.',
                 },
                 {
                   title: 'Support after launch',
                   description:
-                    'If you need updates, fixes, or the next phase later, I can stay involved.',
+                    'If you need updates, fixes, or more work later, I can keep helping.',
                 },
               ].map((point) => (
                 <div

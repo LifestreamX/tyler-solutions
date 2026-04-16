@@ -4,19 +4,19 @@ import { FadeUp, FadeIn } from '@/lib/motion';
 
 const reasons = [
   {
-    title: 'Plain-language communication',
+    title: 'Plain-English communication',
     description:
       'You talk to the person doing the work, so questions move faster and the recommendations stay easy to understand.',
     tone: 'accent-blue',
   },
   {
-    title: 'One person throughout',
+    title: 'One person start to finish',
     description:
       'I stay involved from early planning through launch instead of passing the work around between different people.',
     tone: 'accent-violet',
   },
   {
-    title: 'Advice tied to the business',
+    title: 'Advice that fits the business',
     description:
       'I look at what the business actually needs instead of forcing the same answer on every project.',
     tone: 'accent-emerald',
@@ -42,9 +42,9 @@ export function Testimonials() {
               <span className='block text-accent'>Like Working With Me</span>
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Most business owners want the work explained clearly, handled
-              responsibly, and kept moving. They want clear advice, practical
-              work, and one person who stays accountable from start to finish.
+              Most business owners want clear answers, solid work, and someone
+              who follows through. They want advice that fits the business and
+              a process that stays efficient.
             </p>
           </div>
         </FadeUp>
@@ -57,17 +57,17 @@ export function Testimonials() {
               </p>
               <div className='max-w-2xl space-y-5'>
                 <h3 className='text-xl lg:text-2xl font-semibold text-foreground'>
-                  You work with the person doing the work from the first
-                  conversation through launch.
+                  You work with me directly from the first conversation through
+                  launch.
                 </h3>
                 <p className='text-sm lg:text-base text-muted-foreground leading-relaxed'>
-                  Clients usually hire me because they want someone who can
-                  understand the business, explain the options clearly, and keep
-                  the work moving without confusion.
+                  People usually hire me because they want someone who
+                  understands the business, explains the options clearly, and
+                  keeps the work moving.
                 </p>
                 <p className='text-sm lg:text-base text-muted-foreground leading-relaxed'>
                   I handle planning, design, build, launch, and follow-up
-                  support when needed. That keeps communication simpler and
+                  support when needed. That keeps the process cleaner and puts
                   responsibility in one place.
                 </p>
               </div>

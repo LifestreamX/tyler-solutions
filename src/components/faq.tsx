@@ -18,11 +18,11 @@ export function Faq() {
               id='faq-heading'
               className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4'
             >
-              Questions People Usually Ask Before Reaching Out
+              Questions I Hear Before People Reach Out
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              If you are not sure whether now is the right time to ask, these
-              are usually the first things people want to know.
+              If you are still deciding whether to get in touch, these are the
+              questions I hear most.
             </p>
           </div>
         </FadeUp>
@@ -45,8 +45,8 @@ export function Faq() {
         <FadeUp delay={0.15}>
           <div className='mt-8 rounded border border-border bg-background px-5 py-4 shadow-sm dark:shadow-none sm:px-6'>
             <p className='text-sm leading-relaxed text-muted-foreground'>
-              If you are still unsure, send a short note anyway. I can tell you
-              whether it sounds like a fit and what I would recommend next.
+              If you are still not sure, send a short note anyway. I can tell
+              you whether it sounds like a fit and what I&apos;d suggest next.
             </p>
           </div>
         </FadeUp>

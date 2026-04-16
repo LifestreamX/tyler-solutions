@@ -34,13 +34,13 @@ const caseStudies: CaseStudy[] = [
   {
     tag: 'Team Operations',
     num: '01',
-    title: 'Client Communication and Billing Hub',
-    role: 'Planned, designed, built, and launched the full system',
+    title: 'Customer Portal for Messaging and Billing',
+    role: 'Planned, designed, and built the full system',
     period: '2024 to Present',
     description:
-      'Built a private online area that brought customer communication, login access, and billing into one place for the business.',
+      'Built a secure online area that brought messages, account access, and billing into one place.',
     outcomes: [
-      'Made it easier for staff and clients to keep communication in one place',
+      'Made it easier for staff and customers to keep communication in one place',
       'Reduced back-and-forth and repetitive office work',
       'Let customers view accounts and handle billing in the same space',
       'Kept the right information visible to the right people',
@@ -49,7 +49,7 @@ const caseStudies: CaseStudy[] = [
     included: [
       'Secure messaging',
       'Subscription billing',
-      'Private account area',
+      'Secure account area',
       'Invites and permissions',
       'Staff tools',
       'Business reporting',
@@ -60,10 +60,10 @@ const caseStudies: CaseStudy[] = [
     tag: 'Online Store',
     num: '02',
     title: 'Store Recovery and Growth Support',
-    role: 'Fixed, improved, and stabilized an existing store',
+    role: 'Stepped in to fix and improve an existing store',
     period: '2024',
     description:
-      'Stepped into an online store that was losing sales because of speed and checkout problems, then stabilized and improved it so the business could keep growing.',
+      'Stepped into an online store that was losing sales because of speed and checkout issues, then fixed the key problems so the business could keep growing.',
     outcomes: [
       'Removed checkout problems that were blocking sales',
       'Improved site speed so more shoppers could complete purchases',
@@ -84,11 +84,11 @@ const caseStudies: CaseStudy[] = [
   {
     tag: 'Custom Product',
     num: '03',
-    title: 'Guided Search and Recommendation Experience',
-    role: 'Took a client concept from idea to live product',
+    title: 'Guided Search and Recommendation Tool',
+    role: 'Took a client idea from concept to launch',
     period: 'Jan 2024 to Jun 2024',
     description:
-      'Built a web experience that helped people narrow their options and reach the right choice faster.',
+      'Built a web tool that helped people narrow their options and get to the right choice faster.',
     outcomes: [
       'Moved the idea from planning to live launch',
       'Created a clearer step-by-step search experience',
@@ -127,8 +127,8 @@ export function CaseStudies() {
               Recent Client Work
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              A few examples of work that made it easier to sell, serve
-              customers, or run the business.
+              A few examples of work that helped businesses sell more, serve
+              customers better, or make day-to-day work easier.
             </p>
           </div>
         </FadeUp>
@@ -239,7 +239,7 @@ export function CaseStudies() {
               onClick={() => trackBookCallClick('case_studies')}
               className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-6 py-3 text-sm font-semibold text-accent-foreground'
             >
-              See If I Can Help
+              Start a Project
             </a>
           </div>
         </FadeUp>

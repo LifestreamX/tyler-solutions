@@ -114,7 +114,7 @@ export function Navbar() {
               onClick={() => trackBookCallClick('navbar')}
               className='btn-accent inline-flex min-h-11 items-center justify-center rounded px-4 py-2 text-sm font-semibold text-accent-foreground'
             >
-              Get in Touch
+              Start a Project
             </a>
           </div>
 
@@ -177,7 +177,7 @@ export function Navbar() {
                 }}
                 className='btn-accent mt-8 inline-flex min-h-11 items-center justify-center rounded px-6 py-4 text-base font-semibold text-accent-foreground'
               >
-                Get in Touch
+                Start a Project
               </a>
             </nav>
           </motion.div>

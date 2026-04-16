@@ -48,8 +48,8 @@ const contactInfo = [
 
 const nextSteps = [
   'I read every message myself',
-  'I reply with the best next step and whether it feels like a fit',
-  'If it makes sense, we can set up a call after that',
+  'I reply with what I would recommend next',
+  'If it looks like a fit, we can decide together what should happen after that',
 ];
 
 export function Contact() {
@@ -143,18 +143,17 @@ export function Contact() {
                 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6'
               >
                 <span className='block'>Tell Me What You Need</span>
-                <span className='block text-accent'>Built or Fixed.</span>
+                <span className='block text-accent'>I&apos;ll Tell You What Makes Sense.</span>
               </h2>
               <p className='text-muted-foreground leading-relaxed mb-10'>
-                If you need a new website, help with an existing one, better
-                online sales, a private customer area, clearer tracking, or a
-                tool for your team, send the details. I&rsquo;ll review it, talk
-                through the best next step, and be direct if I&rsquo;m not the
-                right fit.
+                If you need a new website, help with the one you already have,
+                better online sales, secure customer areas, or a tool for your
+                team, send over the details. I&apos;ll review it, tell you what I&apos;d
+                recommend, and say so if I don&apos;t think I&apos;m the right fit.
               </p>
               <p className='mb-8 text-sm leading-relaxed text-muted-foreground'>
-                Even a short message is enough. You do not need a full plan, big
-                brief, or polished project outline before reaching out.
+                Even a short note is enough. You don&apos;t need a full plan, a big
+                brief, or a polished project outline before reaching out.
               </p>
 
               <div className='mb-8 rounded border border-border bg-surface p-5 shadow-sm dark:shadow-none'>
@@ -215,8 +214,7 @@ export function Contact() {
                     Message Sent!
                   </h3>
                   <p className='text-muted-foreground'>
-                    Thanks. I received your note and will reply with next steps
-                    soon.
+                    Thanks. I got your note and I&apos;ll reply soon.
                   </p>
                 </div>
               ) : (
@@ -232,8 +230,8 @@ export function Contact() {
                     className='rounded border border-border bg-background px-4 py-3'
                   >
                     <p className='text-sm leading-relaxed text-muted-foreground'>
-                      A few sentences is enough. The most helpful things to
-                      include are what you need, what is not working, and any
+                      A few sentences is enough. The most useful things to
+                      include are what you need, what&apos;s not working, and any
                       timing or links you already have.
                     </p>
                   </div>
@@ -347,7 +345,7 @@ export function Contact() {
                       {...register('message')}
                       onFocus={handleFormInteraction}
                       className={`${inputClass} resize-none`}
-                      placeholder='A few sentences is enough. Tell me what you need, what is not working, and any timing, links, or examples that would help.'
+                      placeholder='A few sentences is enough. Tell me what you need, what&apos;s not working, and any timing, links, or examples that would help.'
                       aria-describedby={
                         errors.message ? 'message-error' : undefined
                       }
@@ -387,11 +385,16 @@ export function Contact() {
                       </>
                     ) : (
                       <>
-                        Send My Message
+                        Send Message
                         <Send className='h-4 w-4 group-hover:translate-x-1 transition-transform' />
                       </>
                     )}
                   </button>
+
+                  <p className='text-center text-xs leading-relaxed text-muted-foreground'>
+                    No pressure. If I do not think I am the right fit, I will
+                    tell you.
+                  </p>
                 </form>
               )}
             </div>

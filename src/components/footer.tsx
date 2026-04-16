@@ -63,9 +63,9 @@ export function Footer() {
               </span>
             </a>
             <p className='text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed'>
-              Websites, online stores, private customer areas, internal tools,
-              and ongoing support built with clear communication and dependable
-              delivery.
+              Websites, online stores, secure customer areas, internal tools,
+              and ongoing support for businesses that want things to run more
+              smoothly.
             </p>
           </div>
 

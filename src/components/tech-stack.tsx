@@ -6,7 +6,7 @@ const capabilities = [
   {
     title: 'Websites, Sales Pages, and Online Stores',
     description:
-      'The pages customers see first, whether you need a full business website, a page built to bring in inquiries, or an online store.',
+      'The pages customers see first, whether you need a full website, a page built to bring in leads, or an online store.',
     examples: [
       'Business websites',
       'Sales pages',
@@ -15,7 +15,7 @@ const capabilities = [
     ],
   },
   {
-    title: 'Private Customer Areas, Staff Tools, and Secure Workflows',
+    title: 'Customer Areas, Staff Tools, and Secure Workflows',
     description:
       'Password-protected areas, secure messaging, and internal tools that help customers and staff get what they need without extra back-and-forth.',
     examples: [
@@ -72,9 +72,9 @@ export function TechStack() {
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
               Some businesses need a new website. Others need easier payments,
-              private customer areas, automations, clearer reports, or better
+              secure customer areas, automations, clearer reports, or better
               day-to-day tools. I can help with those pieces without making the
-              process feel complicated.
+              process harder than it needs to be.
             </p>
           </div>
         </FadeUp>
@@ -113,9 +113,9 @@ export function TechStack() {
         <FadeUp delay={0.15}>
           <div className='mt-8 rounded border border-border bg-card px-5 py-4 shadow-sm dark:shadow-none sm:px-6'>
             <p className='text-sm leading-relaxed text-muted-foreground'>
-              You do not need a giant rebuild to make progress. Sometimes the
-              right next step is a clearer sales page, a simpler form, a better
-              checkout, or a private area for customers or staff.
+              You do not need a full rebuild to make meaningful progress.
+              Sometimes the right next step is a better sales page, a simpler
+              form, a cleaner checkout, or a login area for customers or staff.
             </p>
           </div>
         </FadeUp>

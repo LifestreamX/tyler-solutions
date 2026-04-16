@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     template: '%s | Tyler Allen Solutions',
   },
   description:
-    'Tyler Allen Solutions builds business websites, improves online stores, creates private customer areas, and delivers custom tools and after-launch support that make day-to-day work easier.',
+    'Tyler Allen Solutions helps businesses launch websites, improve online stores, add secure customer areas, and build internal tools that save time.',
   applicationName: 'Tyler Allen Solutions',
   keywords: [
     'business website development',
     'website redesign',
     'online store improvements',
     'custom business tools',
-    'private customer areas',
+    'customer logins',
     'business automation',
     'subscription billing setup',
     'business process improvements',
@@ -56,14 +56,14 @@ export const metadata: Metadata = {
     url: '/',
     title: 'Tyler Allen Solutions | Websites and Business Tools',
     description:
-      'Business websites, store support, private customer areas, and business tools built around clear communication and dependable delivery.',
+      'Websites, store fixes, secure customer areas, and internal tools for businesses that want straightforward help and solid follow-through.',
     siteName: 'Tyler Allen Solutions',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Tyler Allen Solutions websites, store support, private customer areas, and business tools',
+        alt: 'Tyler Allen Solutions websites, store help, secure customer areas, and business tools',
       },
     ],
   },
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tyler Allen Solutions | Websites and Business Tools',
     description:
-      'Business websites, store support, private customer areas, and business tools for companies that want clear communication and dependable delivery.',
+      'Websites, store fixes, secure customer areas, and internal tools for businesses that want straightforward help and reliable follow-through.',
     images: ['/twitter-image'],
   },
   robots: {
@@ -115,7 +115,7 @@ const jsonLd = {
         addressCountry: 'US',
       },
       description:
-        'Tyler Allen builds business websites, improves online stores, and creates private customer areas and business tools with clear communication and dependable delivery.',
+        'Tyler Allen helps businesses launch websites, improve online stores, and build secure customer areas and internal tools.',
       sameAs: [
         'https://linkedin.com/in/tylerallen1',
         'https://github.com/LifestreamX',
@@ -137,7 +137,7 @@ const jsonLd = {
       url: 'https://solutions.tyler-allen.com',
       name: 'Tyler Allen Solutions',
       description:
-        'Business websites, online store improvements, private customer areas, and business tools for companies that need clear communication and dependable delivery.',
+        'Websites, online stores, secure customer areas, and internal tools for businesses that want practical help and reliable follow-through.',
       publisher: { '@id': 'https://solutions.tyler-allen.com/#person' },
     },
     {
@@ -146,7 +146,7 @@ const jsonLd = {
       name: 'Tyler Allen Solutions',
       url: 'https://solutions.tyler-allen.com',
       description:
-        'Business websites, online store support, private customer areas, payments, reports, after-launch help, and custom tools for growing businesses.',
+        'Website builds, store improvements, secure customer areas, internal tools, tracking, speed fixes, and ongoing support for growing businesses.',
       provider: { '@id': 'https://solutions.tyler-allen.com/#person' },
       areaServed: 'United States',
       serviceType: [
@@ -155,7 +155,7 @@ const jsonLd = {
         'Online Store Development',
         'Shopify Support',
         'WordPress Support',
-        'Private Customer Areas',
+        'Customer Logins and Portals',
         'Business Automations and Internal Tools',
         'Accessibility Improvements',
         'Analytics and Tracking Setup',
@@ -184,7 +184,7 @@ const jsonLd = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Private Customer Areas, Internal Tools, and Business Tools',
+              name: 'Customer Logins, Internal Tools, and Business Tools',
             },
           },
           {

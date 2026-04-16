@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Tyler Allen Solutions',
     short_name: 'TA Solutions',
     description:
-      'Business websites, online store support, private customer areas, business tools, and after-launch help built with clear communication and dependable delivery.',
+      'Websites, online stores, secure customer areas, internal tools, and after-launch help for businesses that want things to run more smoothly.',
     lang: 'en-US',
     dir: 'ltr',
     start_url: '/',

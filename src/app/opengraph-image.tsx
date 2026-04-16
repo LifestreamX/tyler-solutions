@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const alt =
-  'Tyler Allen Solutions websites, store support, private customer areas, and business tools';
+  'Tyler Allen Solutions websites, store help, secure customer areas, and business tools';
 
 export const size = {
   width: 1200,
@@ -80,8 +80,8 @@ export default function OpenGraphImage() {
               lineHeight: 1.02,
             }}
           >
-            Tyler Allen builds websites, improves stores, and creates private
-            customer areas and business tools for growing companies.
+            Tyler Allen builds websites, improves online stores, and creates
+            secure customer areas and internal tools for growing businesses.
           </div>
           <div
             style={{
@@ -91,8 +91,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.35,
             }}
           >
-            Clear communication, dependable delivery, and practical help before
-            and after launch.
+            Straight answers, solid work, and support before and after launch.
           </div>
         </div>
 

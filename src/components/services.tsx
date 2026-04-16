@@ -9,11 +9,11 @@ const services = [
     tag: '01',
     title: 'New Websites, Sales Pages, and Online Stores',
     description:
-      'If you need a new website, a page built to bring in inquiries, or a better online sales experience, I can handle the planning, design, setup, and launch.',
+      'If you need a new website, a page built to bring in leads, or a better online store, I can handle it from planning through launch.',
     features: [
       'Business websites and service pages',
       'Online stores with product, cart, and checkout setup',
-      'Private customer areas and logins',
+      'Secure customer areas',
       'Mobile-friendly pages your team can update',
     ],
   },
@@ -22,7 +22,7 @@ const services = [
     tag: '02',
     title: 'Fixes, Updates, and Growth Improvements',
     description:
-      'If the site you have now is outdated, difficult to manage, or costing you leads or sales, I can improve it without pushing a full rebuild unless that is truly the best move.',
+      'If your current site is outdated, hard to manage, or costing you leads or sales, I can improve it without turning it into a bigger job than it needs to be.',
     features: [
       'Design refreshes and content updates',
       'Fixes for slow pages, broken forms, and checkout problems',
@@ -33,14 +33,14 @@ const services = [
   {
     icon: Settings2,
     tag: '03',
-    title: 'Internal Tools, Automations, and Time-Saving Systems',
+    title: 'Internal Tools and Smart Automations',
     description:
-      'I also build the behind-the-scenes tools that help teams save time, stay organized, and stop doing repetitive work by hand.',
+      'I also build the behind-the-scenes pieces that save time, cut down repeated work, and make day-to-day tasks easier for your team.',
     features: [
-      'Internal tools and simple reports',
+      'Simple internal tools and reports',
       'Secure logins, invites, and permission setup',
       'Automations between forms, email, payments, and other tools',
-      'Tools built around how your business already works',
+      'Tools that fit the way your business already runs',
     ],
   },
 ];
@@ -52,7 +52,7 @@ const alsoAvailable = [
   'Payments and subscriptions',
   'Shopify and WordPress support',
   'Email and software connections',
-  'CRM and marketing automation',
+  'CRM and email automation',
   'Data imports and cleanup',
   'Speed improvements',
   'Security, backups, and maintenance',
@@ -60,7 +60,7 @@ const alsoAvailable = [
   'AI chat and support tools',
   'Platform migrations',
   'Wholesale and partner sales setup',
-  'Sensitive or compliance-aware workflows',
+  'Projects with stricter privacy or compliance needs',
   'Site reviews and improvement plans',
   'Ongoing support',
 ];
@@ -81,13 +81,12 @@ export function Services() {
               id='services-heading'
               className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4'
             >
-              What Clients Usually Hire Me For
+              How I Can Help
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Whether you need something customer-facing, help behind the
-              scenes, or improvements to what you already have, I can usually
-              step in without turning it into a bigger project than it needs to
-              be.
+              Some projects need a new website. Others need better sales pages,
+              secure customer areas, cleaner systems behind the scenes, or
+              fixes to what is already there.
             </p>
           </div>
         </FadeUp>

@@ -17,21 +17,21 @@ export const metadata: Metadata = {
     absolute: 'Tyler Allen Solutions | Websites and Business Tools',
   },
   description:
-    'Business websites, online store improvements, private customer areas, and custom business tools, plus after-launch help with tracking, speed, and updates.',
+    'Websites, online stores, secure customer areas, and custom tools for businesses that want better sales, smoother operations, and dependable support after launch.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Tyler Allen Solutions | Websites and Business Tools',
     description:
-      'Tyler Allen helps businesses launch websites, improve online stores, create private customer areas, and keep things improving after launch.',
+      'Tyler Allen helps businesses launch websites, improve online stores, add secure customer areas, and fix the things that get missed after launch.',
     url: '/',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Tyler Allen Solutions websites, store support, private customer areas, and business tools',
+        alt: 'Tyler Allen Solutions websites, store help, secure customer areas, and business tools',
       },
     ],
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tyler Allen Solutions | Websites and Business Tools',
     description:
-      'Business websites, store support, private customer areas, and business tools with practical after-launch help when needed.',
+      'Websites, store help, secure customer areas, and business tools with dependable support after launch.',
     images: ['/twitter-image'],
   },
 };
@@ -57,9 +57,9 @@ export default function Home() {
       <main id='main-content' className='section-stack flex-1'>
         <Hero />
         <Services />
-        <PostLaunchSupport />
         <CaseStudies />
         <Testimonials />
+        <PostLaunchSupport />
         <About />
         <TechStack />
         <Process />

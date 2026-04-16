@@ -13,37 +13,37 @@ const steps = [
   {
     icon: MessageSquare,
     number: '01',
-    title: 'Initial Conversation',
+    title: 'First Conversation',
     description:
       'We talk through what you need, what is getting in the way, and what success should look like.',
   },
   {
     icon: Search,
     number: '02',
-    title: 'Plan, Timeline, and Price',
+    title: 'Plan and Price',
     description:
-      'I send back the recommended plan, timeline, and cost so you can make a decision with clear expectations.',
+      'I send back the plan, timeline, and cost so you can decide with clear expectations.',
   },
   {
     icon: FileCode2,
     number: '03',
-    title: 'Build With Check-Ins',
+    title: 'Build and Review',
     description:
-      'I build in stages and share progress as we go so feedback happens early and the project stays visible.',
+      'I build in stages and share progress as we go so feedback happens early and nothing disappears into a black box.',
   },
   {
     icon: Rocket,
     number: '04',
-    title: 'Launch and Final Checks',
+    title: 'Launch Checks',
     description:
-      'Before launch I check how it looks on phones, whether forms work, how fast pages load, and whether the right tracking is in place.',
+      'Before launch I check mobile layouts, forms, page speed, and tracking so the site is ready for real use.',
   },
   {
     icon: Headphones,
     number: '05',
-    title: 'Support if Needed',
+    title: 'Support After Launch',
     description:
-      'After launch I can help with updates, fixes, and next-phase improvements if you want ongoing support.',
+      'After launch I can help with updates, fixes, and the next phase if you want ongoing support.',
   },
 ];
 
@@ -66,8 +66,7 @@ export function Process() {
               How We Work Together
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Straightforward, visible, and built to keep the work moving
-              without confusion.
+              Clear, efficient, and built to keep the work moving.
             </p>
           </div>
         </FadeUp>
