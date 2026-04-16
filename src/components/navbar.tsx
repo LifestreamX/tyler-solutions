@@ -90,7 +90,7 @@ export function Navbar() {
           {/* Logo */}
           <a
             href='#'
-            aria-label='Back to top'
+            aria-label='Tyler Allen Solutions, back to top'
             className='inline-flex min-h-11 items-center text-foreground font-bold tracking-tight transition-colors hover:text-accent'
           >
             Tyler Allen Solutions

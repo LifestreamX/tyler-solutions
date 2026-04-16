@@ -32,6 +32,7 @@ const footerLinks = [
   { label: 'How I Help', href: '#stack' },
   { label: 'Client Work', href: '#work' },
   { label: 'Process', href: '#process' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -55,7 +56,7 @@ export function Footer() {
             <a
               href='#'
               className='inline-flex min-h-11 items-center gap-2 text-foreground transition-colors hover:text-accent'
-              aria-label='Back to top'
+              aria-label='Tyler Allen Solutions, back to top'
             >
               <span className='font-bold text-foreground tracking-tight'>
                 Tyler Allen Solutions

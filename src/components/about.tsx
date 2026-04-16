@@ -49,7 +49,7 @@ export function About() {
                 id='about-heading'
                 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6'
               >
-                <span className='block'>One Person Who Can Take It</span>
+                <span className='block'>One Person Who Can Handle It</span>
                 <span className='block text-accent'>From Plan to Launch.</span>
               </h2>
               <div className='space-y-5 text-muted-foreground leading-relaxed text-sm lg:text-base'>

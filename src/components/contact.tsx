@@ -224,9 +224,13 @@ export function Contact() {
                   onSubmit={handleSubmit(onSubmit, onInvalid)}
                   className='space-y-5'
                   aria-busy={isSubmitting}
+                  aria-describedby='contact-form-help'
                   noValidate
                 >
-                  <div className='rounded border border-border bg-background px-4 py-3'>
+                  <div
+                    id='contact-form-help'
+                    className='rounded border border-border bg-background px-4 py-3'
+                  >
                     <p className='text-sm leading-relaxed text-muted-foreground'>
                       A few sentences is enough. The most helpful things to
                       include are what you need, what is not working, and any
@@ -245,6 +249,7 @@ export function Contact() {
                     <input
                       id='name'
                       type='text'
+                      required
                       autoComplete='name'
                       autoCapitalize='words'
                       enterKeyHint='next'
@@ -277,6 +282,7 @@ export function Contact() {
                     <input
                       id='email'
                       type='email'
+                      required
                       autoComplete='email'
                       autoCapitalize='none'
                       autoCorrect='off'
@@ -336,6 +342,7 @@ export function Contact() {
                     <textarea
                       id='message'
                       rows={5}
+                      required
                       enterKeyHint='send'
                       {...register('message')}
                       onFocus={handleFormInteraction}

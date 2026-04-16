@@ -138,9 +138,9 @@ export function Hero() {
                   key={point.title}
                   className='rounded border border-border bg-surface p-4 shadow-sm dark:shadow-none'
                 >
-                  <h3 className='text-sm font-semibold text-foreground mb-1'>
+                  <p className='text-sm font-semibold text-foreground mb-1'>
                     {point.title}
-                  </h3>
+                  </p>
                   <p className='text-xs text-muted-foreground leading-relaxed'>
                     {point.description}
                   </p>

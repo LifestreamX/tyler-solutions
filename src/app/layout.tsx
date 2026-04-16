@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { AnalyticsTracker } from '@/components/analytics-tracker';
 import { ThemeProvider } from '@/components/theme-provider';
 import { GA_MEASUREMENT_ID } from '@/lib/analytics';
+import { faqItems } from '@/lib/site-content';
 import './globals.css';
 
 const inter = Inter({
@@ -25,13 +26,16 @@ export const metadata: Metadata = {
     'website redesign',
     'online store improvements',
     'custom business tools',
-    'client portals',
-    'reporting dashboards',
+    'private customer areas',
+    'business automation',
+    'subscription billing setup',
     'business process improvements',
-    'website accessibility improvements',
-    'website performance improvements',
-    'Shopify development',
+    'website accessibility support',
+    'website speed improvements',
+    'analytics and tracking setup',
+    'Shopify support',
     'WordPress support',
+    'website migrations',
     'Tyler Allen Solutions',
     'Massachusetts website consultant',
     'Tyler Allen',
@@ -104,7 +108,7 @@ const jsonLd = {
       email: 'tylerallen@live.com',
       telephone: '+17742791607',
       jobTitle: 'Website and Business Systems Partner',
-      image: 'https://solutions.tyler-allen.com/opengraph-image',
+      image: 'https://solutions.tyler-allen.com/tyler.jpeg',
       address: {
         '@type': 'PostalAddress',
         addressRegion: 'MA',
@@ -115,6 +119,16 @@ const jsonLd = {
       sameAs: [
         'https://linkedin.com/in/tylerallen1',
         'https://github.com/LifestreamX',
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: 'tylerallen@live.com',
+          telephone: '+17742791607',
+          areaServed: 'US',
+          availableLanguage: ['English'],
+        },
       ],
     },
     {
@@ -139,12 +153,14 @@ const jsonLd = {
         'Website Design and Development',
         'Website Redesign',
         'Online Store Development',
-        'Shopify Development',
-        'WordPress Development',
-        'Client Portals',
-        'Business Tools',
-        'Accessibility and Usability Improvements',
-        'Reporting and Performance Improvements',
+        'Shopify Support',
+        'WordPress Support',
+        'Private Customer Areas',
+        'Business Automations and Internal Tools',
+        'Accessibility Improvements',
+        'Analytics and Tracking Setup',
+        'Website Speed Improvements',
+        'Website Migrations',
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -171,8 +187,27 @@ const jsonLd = {
               name: 'Private Customer Areas, Internal Tools, and Business Tools',
             },
           },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'After-Launch Support, Tracking, and Website Reviews',
+            },
+          },
         ],
       },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://solutions.tyler-allen.com/#faq',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
     },
   ],
 };

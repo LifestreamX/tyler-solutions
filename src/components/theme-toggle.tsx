@@ -44,6 +44,7 @@ export function ThemeToggle() {
       }}
       className='inline-flex min-h-11 items-center justify-center gap-2 rounded border border-border bg-card px-3 py-2 text-muted-foreground shadow-sm transition-all duration-300 hover:-translate-y-px hover:border-accent/40 hover:text-accent hover:shadow-md dark:shadow-none dark:hover:shadow-none cursor-pointer'
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      aria-pressed={isDark}
     >
       {isDark ? (
         <Sun className='h-3 w-3' aria-hidden='true' />
