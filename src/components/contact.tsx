@@ -143,17 +143,20 @@ export function Contact() {
                 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6'
               >
                 <span className='block'>Tell Me What You Need</span>
-                <span className='block text-accent'>I&apos;ll Tell You What Makes Sense.</span>
+                <span className='block text-accent'>
+                  I&apos;ll Tell You What Makes Sense.
+                </span>
               </h2>
               <p className='text-muted-foreground leading-relaxed mb-10'>
                 If you need a new website, help with the one you already have,
                 better online sales, secure customer areas, or a tool for your
-                team, send over the details. I&apos;ll review it, tell you what I&apos;d
-                recommend, and say so if I don&apos;t think I&apos;m the right fit.
+                team, send over the details. I&apos;ll review it, tell you what
+                I&apos;d recommend, and say so if I don&apos;t think I&apos;m
+                the right fit.
               </p>
               <p className='mb-8 text-sm leading-relaxed text-muted-foreground'>
-                Even a short note is enough. You don&apos;t need a full plan, a big
-                brief, or a polished project outline before reaching out.
+                If you do not have a polished brief yet, that is fine. Send the
+                basics and I will take it from there.
               </p>
 
               <div className='mb-8 rounded border border-border bg-surface p-5 shadow-sm dark:shadow-none'>
@@ -230,9 +233,9 @@ export function Contact() {
                     className='rounded border border-border bg-background px-4 py-3'
                   >
                     <p className='text-sm leading-relaxed text-muted-foreground'>
-                      A few sentences is enough. The most useful things to
-                      include are what you need, what&apos;s not working, and any
-                      timing or links you already have.
+                      If you only have a rough outline, that is fine. Share the
+                      goal, what is currently blocked, and any links or
+                      deadlines that matter.
                     </p>
                   </div>
 
@@ -345,7 +348,7 @@ export function Contact() {
                       {...register('message')}
                       onFocus={handleFormInteraction}
                       className={`${inputClass} resize-none`}
-                      placeholder='A few sentences is enough. Tell me what you need, what&apos;s not working, and any timing, links, or examples that would help.'
+                      placeholder='Tell me what is not working, what you want instead, and any link or screenshot I should check first.'
                       aria-describedby={
                         errors.message ? 'message-error' : undefined
                       }

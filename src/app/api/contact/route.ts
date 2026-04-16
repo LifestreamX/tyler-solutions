@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+const DEFAULT_RESEND_FROM = 'Tyler Allen Solutions <contact@tyler-allen.com>';
+const VERIFIED_SENDER_DOMAIN = 'tyler-allen.com';
+
 function escapeHtml(value: string) {
   return value
     .replaceAll('&', '&amp;')
@@ -8,6 +11,36 @@ function escapeHtml(value: string) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+}
+
+function extractEmailAddress(value: string) {
+  const matchedAddress = value.match(/<([^>]+)>/);
+  return (matchedAddress?.[1] ?? value).trim().toLowerCase();
+}
+
+function isVerifiedSenderAddress(value: string) {
+  const emailAddress = extractEmailAddress(value);
+  return emailAddress.endsWith(`@${VERIFIED_SENDER_DOMAIN}`);
+}
+
+function getResendFromAddress() {
+  const configuredFrom = process.env.RESEND_FROM?.trim();
+
+  if (configuredFrom && isVerifiedSenderAddress(configuredFrom)) {
+    return configuredFrom;
+  }
+
+  if (configuredFrom) {
+    console.warn(
+      'Ignoring RESEND_FROM because it is not on the verified sender domain',
+      {
+        resendFrom: configuredFrom,
+        verifiedDomain: VERIFIED_SENDER_DOMAIN,
+      },
+    );
+  }
+
+  return DEFAULT_RESEND_FROM;
 }
 
 export async function POST(request: Request) {
@@ -20,7 +53,12 @@ export async function POST(request: Request) {
       message?: string;
     };
 
-    if (!name || !email || !message) {
+    const trimmedName = name?.trim();
+    const trimmedEmail = email?.trim();
+    const trimmedCompany = company?.trim();
+    const trimmedMessage = message?.trim();
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 },
@@ -36,6 +74,8 @@ export async function POST(request: Request) {
       );
     }
 
+    const resendFrom = getResendFromAddress();
+
     const contactEmail = process.env.CONTACT_EMAIL?.trim();
     if (!contactEmail) {
       console.error('CONTACT_EMAIL env var not set');
@@ -45,24 +85,21 @@ export async function POST(request: Request) {
       );
     }
 
-    // For production, you should use a verified sender address (RESEND_FROM) for the 'from' field.
-    // For simple setups, CONTACT_EMAIL can be used if it is a verified sender in Resend.
-    const resendFrom = contactEmail;
     const destinationEmail = contactEmail;
 
     const resend = new Resend(resendApiKey);
 
-    const safeName = escapeHtml(name.trim());
-    const replyTo = email.trim();
+    const safeName = escapeHtml(trimmedName);
+    const replyTo = trimmedEmail;
     const safeEmail = escapeHtml(replyTo);
-    const safeCompany = company ? escapeHtml(company.trim()) : '';
-    const safeMessage = escapeHtml(message.trim());
+    const safeCompany = trimmedCompany ? escapeHtml(trimmedCompany) : '';
+    const safeMessage = escapeHtml(trimmedMessage);
 
     const { error } = await resend.emails.send({
       from: resendFrom,
       to: destinationEmail,
       replyTo,
-      subject: `New enquiry from ${name}${company ? ` - ${company}` : ''}`,
+      subject: `New enquiry from ${trimmedName}${trimmedCompany ? ` - ${trimmedCompany}` : ''}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;">
           <h2 style="color:#1e293b;border-bottom:2px solid #3b82f6;padding-bottom:8px;">
@@ -83,6 +120,9 @@ export async function POST(request: Request) {
         typeof error.message === 'string' && error.message.length > 0
           ? error.message
           : 'Failed to send email';
+      const isSenderDomainError =
+        error.statusCode === 403 &&
+        resendMessage.toLowerCase().includes('domain is not verified');
 
       console.error('Resend error:', {
         statusCode: error.statusCode,
@@ -92,7 +132,9 @@ export async function POST(request: Request) {
 
       return NextResponse.json(
         {
-          error: 'Failed to send email',
+          error: isSenderDomainError
+            ? 'Email sender is not verified. Set RESEND_FROM to an address on a verified Resend domain.'
+            : 'Failed to send email',
         },
         { status: 500 },
       );
