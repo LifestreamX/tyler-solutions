@@ -77,7 +77,15 @@ function isCalendlyMessage(
   );
 }
 
-export function CalendlyEmbed({ url, title }: { url: string; title: string }) {
+export function CalendlyEmbed({
+  url,
+  title,
+  className,
+}: {
+  url: string;
+  title: string;
+  className?: string;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const seenEvents = useRef(new Set<string>());
   const [failed, setFailed] = useState(false);
@@ -166,7 +174,14 @@ export function CalendlyEmbed({ url, title }: { url: string; title: string }) {
 
   if (failed) {
     return (
-      <div className='flex min-h-175 items-center justify-center p-6 text-center sm:min-h-190'>
+      <div
+        className={[
+          'flex w-full items-center justify-center p-6 text-center',
+          className,
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      >
         <p className='max-w-sm text-sm leading-relaxed text-muted-foreground'>
           The embedded calendar could not load here. Use the full calendar link
           above to book a time directly.
@@ -179,7 +194,7 @@ export function CalendlyEmbed({ url, title }: { url: string; title: string }) {
     <div
       ref={containerRef}
       aria-label={title}
-      className='min-h-175 w-full sm:min-h-190'
+      className={['w-full', className].filter(Boolean).join(' ')}
     />
   );
 }

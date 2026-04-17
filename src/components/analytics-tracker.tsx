@@ -92,7 +92,6 @@ export function AnalyticsTracker() {
       hero: 'Hero',
       services: 'Services',
       work: 'Recent Work',
-      trust: 'Why Clients Like Working With Me',
       'after-launch': 'Site Review',
       about: 'About',
       stack: 'Capabilities',

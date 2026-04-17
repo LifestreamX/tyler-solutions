@@ -1,49 +1,35 @@
 'use client';
 
 import { FadeUp, StaggerContainer, motion, fadeUp } from '@/lib/motion';
-import {
-  MessageSquare,
-  Search,
-  FileCode2,
-  Rocket,
-  Headphones,
-} from 'lucide-react';
+import { MessageSquare, Search, FileCode2, Rocket } from 'lucide-react';
 
 const steps = [
   {
     icon: MessageSquare,
     number: '01',
-    title: 'First Conversation',
+    title: 'Discovery',
     description:
-      'We talk through what you need, what is getting in the way, and what success should look like.',
+      'We talk through the problem, the goal, and any constraints that matter.',
   },
   {
     icon: Search,
     number: '02',
-    title: 'Plan and Price',
-    description:
-      'I send back the plan, timeline, and cost so you can decide with clear expectations.',
+    title: 'Scope and Price',
+    description: 'I send back the recommended approach, timeline, and cost.',
   },
   {
     icon: FileCode2,
     number: '03',
     title: 'Build and Review',
     description:
-      'I build in stages and share progress as we go so feedback happens early and nothing disappears into a black box.',
+      'I share progress in stages so feedback happens early and clearly.',
   },
   {
     icon: Rocket,
     number: '04',
-    title: 'Launch Checks',
+    title: 'Launch and Follow-Through',
     description:
-      'Before launch I check mobile layouts, forms, page speed, and tracking so the site is ready for real use.',
-  },
-  {
-    icon: Headphones,
-    number: '05',
-    title: 'Support After Launch',
-    description:
-      'After launch I can stay involved for updates, fixes, improvements, and the next phase as the site keeps moving forward.',
+      'I handle launch checks and stay available for updates if you need more help afterward.',
   },
 ];
 
@@ -66,13 +52,13 @@ export function Process() {
               How We Work Together
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Clear, efficient, and built to keep the work moving.
+              Simple, clear, and built to keep decisions moving.
             </p>
           </div>
         </FadeUp>
 
         {/* Steps */}
-        <StaggerContainer className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5'>
+        <StaggerContainer className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4'>
           {steps.map((step, index) => (
             <motion.div
               key={step.title}

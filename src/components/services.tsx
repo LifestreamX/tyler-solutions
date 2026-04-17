@@ -7,9 +7,9 @@ const services = [
   {
     icon: LayoutGrid,
     tag: '01',
-    title: 'New Websites, Sales Pages, and Online Stores',
+    title: 'Websites, Sales Pages, and Stores',
     description:
-      'If you need a new website, a page built to bring in leads, or a better online store, I can handle it from planning through launch.',
+      'I handle the planning, build, and launch for new websites, sales pages, and online stores.',
     features: [
       'Business websites and service pages',
       'Online stores with product, cart, and checkout setup',
@@ -20,9 +20,9 @@ const services = [
   {
     icon: Wrench,
     tag: '02',
-    title: 'Fixes, Updates, and Growth Improvements',
+    title: 'Fixes, Updates, and Conversion Improvements',
     description:
-      'If your current site is outdated, hard to manage, or costing you leads or sales, I can improve it without turning it into a bigger job than it needs to be.',
+      'I improve the parts of an existing site that are costing you leads, sales, or time.',
     features: [
       'Design refreshes and content updates',
       'Fixes for slow pages, broken forms, and checkout problems',
@@ -35,7 +35,7 @@ const services = [
     tag: '03',
     title: 'Internal Tools and Smart Automations',
     description:
-      'I also build the behind-the-scenes pieces that save time, cut down repeated work, and make day-to-day tasks easier for your team.',
+      'I build the behind-the-scenes tools that reduce repeated work and make day-to-day operations easier.',
     features: [
       'Simple internal tools and reports',
       'Secure logins, invites, and permission setup',
@@ -46,23 +46,15 @@ const services = [
 ];
 
 const alsoAvailable = [
-  'Accessibility and easier site use',
-  'Lead tracking and reports',
-  'Google Business Profile help',
-  'Payments and subscriptions',
-  'Shopify and WordPress support',
-  'Email and software connections',
-  'CRM and email automation',
-  'Data imports and cleanup',
-  'Speed improvements',
-  'Security, backups, and maintenance',
-  'Content updates',
-  'AI chat and support tools',
-  'Platform migrations',
-  'Wholesale and partner sales setup',
-  'Projects with stricter privacy or compliance needs',
   'Site reviews and improvement plans',
-  'Ongoing support',
+  'Analytics and lead tracking',
+  'Payments and subscriptions',
+  'Email and CRM connections',
+  'Platform migrations',
+  'Speed improvements',
+  'Accessibility improvements',
+  'Maintenance and security',
+  'Shopify and WordPress support',
 ];
 
 export function Services() {
@@ -81,12 +73,11 @@ export function Services() {
               id='services-heading'
               className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4'
             >
-              How I Can Help
+              What I Can Build or Improve
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Some projects need a new website. Others need better sales pages,
-              secure customer areas, cleaner systems behind the scenes, or
-              fixes to what is already there.
+              Some projects need a new site. Others need a cleaner checkout, a
+              secure client area, or a focused fix to something already live.
             </p>
           </div>
         </FadeUp>
@@ -147,7 +138,7 @@ export function Services() {
         <FadeUp delay={0.2}>
           <div className='rounded border border-border bg-surface px-5 py-5 shadow-sm dark:shadow-none flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3 sm:px-6'>
             <span className='font-mono text-[10px] text-muted-foreground uppercase tracking-widest shrink-0'>
-              Other common requests:
+              Often included:
             </span>
             <ul className='flex flex-wrap gap-2' role='list'>
               {alsoAvailable.map((item) => (

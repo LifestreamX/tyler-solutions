@@ -11,9 +11,8 @@ import {
 const servicePills = [
   'Business websites',
   'Online store help',
-  'Secure customer areas',
+  'Secure client areas',
   'Internal tools and automations',
-  'Ongoing support',
 ];
 
 export function Hero() {
@@ -64,9 +63,9 @@ export function Hero() {
           {/* Subheadline */}
           <FadeUp delay={0.2}>
             <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed'>
-              I help businesses launch websites, improve the ones they already
-              have, strengthen online sales, add secure customer or staff areas,
-              and tighten the systems behind the scenes.
+              I build business websites, improve underperforming stores, create
+              secure customer areas, and streamline the systems behind the
+              scenes.
             </p>
           </FadeUp>
 
@@ -92,8 +91,7 @@ export function Hero() {
             </div>
 
             <p className='mt-4 text-sm text-muted-foreground'>
-              Book a call now, or scroll down and send a message if email is
-              easier.
+              Prefer email? Scroll down and send a message.
             </p>
 
             <div className='mt-5 flex flex-wrap gap-2'>
@@ -115,22 +113,22 @@ export function Hero() {
                 {
                   title: 'Direct communication',
                   description:
-                    'You work with me directly from the first conversation through launch.',
+                    'You work with the person doing the work, not layers of account managers.',
                 },
                 {
-                  title: 'Clear plan and pricing',
+                  title: 'Defined scope and pricing',
                   description:
-                    'Before work starts, you know what is being done, what it costs, and what the next step is.',
+                    'Before work starts, you know the plan, the price, and the next decision.',
                 },
                 {
-                  title: 'New builds or targeted fixes',
+                  title: 'Fix what matters first',
                   description:
-                    'I can build something new or improve what you already have without forcing a full rebuild.',
+                    'If a focused fix is better than a rebuild, I will tell you.',
                 },
                 {
-                  title: 'Support after launch',
+                  title: 'Built for real use',
                   description:
-                    'If you need updates, fixes, or more work later, I can keep helping.',
+                    'The finished site or tool is meant to be maintained, updated, and used by your team.',
                 },
               ].map((point) => (
                 <div

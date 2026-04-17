@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react';
+import { PRIMARY_NAV_LINKS } from '@/lib/navigation';
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -25,17 +26,6 @@ function LinkedinIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-
-const footerLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'After Launch', href: '#after-launch' },
-  { label: 'How I Help', href: '#stack' },
-  { label: 'Client Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Book a Call', href: '#schedule' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
-];
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/LifestreamX', icon: GithubIcon },
@@ -64,16 +54,18 @@ export function Footer() {
               </span>
             </a>
             <p className='text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed'>
-              Websites, online stores, secure customer areas, internal tools,
-              and ongoing support for businesses that want things to run more
-              smoothly.
+              Websites, stores, secure customer areas, internal tools, and
+              ongoing support for businesses that need things to work better.
             </p>
           </div>
 
           {/* Nav links */}
           <nav aria-label='Footer navigation'>
-            <ul className='flex flex-wrap gap-4 sm:gap-6' role='list'>
-              {footerLinks.map((link) => (
+            <ul
+              className='grid grid-cols-2 gap-x-6 gap-y-2 sm:flex sm:flex-wrap sm:gap-6'
+              role='list'
+            >
+              {PRIMARY_NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}

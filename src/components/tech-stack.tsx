@@ -4,49 +4,42 @@ import { FadeUp, StaggerContainer, motion, fadeUp } from '@/lib/motion';
 
 const capabilities = [
   {
-    title: 'Websites, Sales Pages, and Online Stores',
+    title: 'Secure Customer and Staff Access',
     description:
-      'The pages customers see first, whether you need a full website, a page built to bring in leads, or an online store.',
+      'Logins, client areas, permissions, and secure workflows for the people who need the right information.',
     examples: [
-      'Business websites',
-      'Sales pages',
-      'Online stores',
-      'Booking or sign-up pages',
-    ],
-  },
-  {
-    title: 'Customer Areas, Staff Tools, and Secure Workflows',
-    description:
-      'Password-protected areas, secure messaging, and internal tools that help customers and staff get what they need without extra back-and-forth.',
-    examples: [
-      'Customer logins',
+      'Customer portals',
+      'Staff logins',
       'Secure messaging',
-      'Staff tools',
-      'Invites and approvals',
+      'Permissions',
     ],
   },
   {
-    title: 'Payments, Automations, and Connected Systems',
+    title: 'Payments and Connected Systems',
     description:
-      'The parts that collect information, take payments, and move the right details between the tools you already use.',
+      'The pieces that collect money and move data between the tools you already use.',
     examples: [
-      'Payments',
+      'Checkout flows',
       'Subscriptions',
-      'Lead forms',
-      'CRM and email tools',
-      'Automation flows',
+      'Invoices',
+      'CRM and email connections',
     ],
   },
   {
-    title: 'Improvements, Support, and Ongoing Upkeep',
+    title: 'Forms, Automation, and Reporting',
     description:
-      'The work that keeps a site easier to use, faster to load, easier to trust, and easier to manage after it is live.',
+      'Operational pieces that reduce manual work and make follow-up easier.',
+    examples: ['Lead forms', 'Automation flows', 'Dashboards', 'Approvals'],
+  },
+  {
+    title: 'Ongoing Improvements',
+    description:
+      'Follow-up work that keeps the site easier to use, faster, and easier to maintain.',
     examples: [
       'Content updates',
-      'Speed improvements',
-      'Accessibility help',
-      'Maintenance and backups',
-      'Platform migrations',
+      'Speed work',
+      'Accessibility fixes',
+      'Maintenance',
     ],
   },
 ] as const;
@@ -67,14 +60,11 @@ export function TechStack() {
               id='stack-heading'
               className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4'
             >
-              <span className='block'>Other Ways</span>
-              <span className='block'>I Can Help</span>
+              Common Features and Systems
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              Some businesses need a new website. Others need easier payments,
-              secure customer areas, automations, clearer reports, or better
-              day-to-day tools. I can help with those pieces without making the
-              process harder than it needs to be.
+              Once the main site or store is in place, these are the extra
+              pieces I often add to help a business run more smoothly.
             </p>
           </div>
         </FadeUp>
@@ -113,9 +103,8 @@ export function TechStack() {
         <FadeUp delay={0.15}>
           <div className='mt-8 rounded border border-border bg-card px-5 py-4 shadow-sm dark:shadow-none sm:px-6'>
             <p className='text-sm leading-relaxed text-muted-foreground'>
-              You do not need a full rebuild to make meaningful progress.
-              Sometimes the right next step is a better sales page, a simpler
-              form, a cleaner checkout, or a login area for customers or staff.
+              Not every project needs all of this. I recommend only the pieces
+              that solve the current problem.
             </p>
           </div>
         </FadeUp>

@@ -2,31 +2,31 @@ export const faqItems = [
   {
     question: 'How does pricing work?',
     answer:
-      'Every project is quoted after I review what you need. Smaller fixes and reviews can often be priced quickly. Larger projects come with a clear plan, timeline, and price before work starts.',
+      'I quote projects after reviewing the work. Smaller fixes can usually be priced quickly. Larger projects come with a clear scope, timeline, and price before anything starts.',
   },
   {
     question: 'How long does a project usually take?',
     answer:
-      'That depends on the size of the work. Smaller updates can move quickly. Full websites, stores, or internal tools take longer. Before anything starts, I will tell you what timeline makes sense.',
+      'Small fixes can move quickly. Larger websites, stores, and internal tools take longer. Before we start, I will tell you what a realistic timeline looks like.',
   },
   {
     question: 'Can you improve what we already have?',
     answer:
-      'Yes. A lot of projects start with an existing website, store, or internal setup. If a full rebuild is not the best move, I will not push one.',
+      'Yes. Many projects start with improving what is already there. If a rebuild is not the right move, I will say so.',
   },
   {
     question: 'Do you offer support after launch?',
     answer:
-      'Yes. I can stay involved for updates, fixes, speed work, tracking, search visibility, and whatever comes next.',
+      'Yes. I can stay involved for updates, fixes, tracking, search visibility, and ongoing improvements.',
   },
   {
     question: 'Can you help with integrations, automations, or platform moves?',
     answer:
-      'Yes. I can connect payments, email tools, CRM systems, marketing tracking, customer accounts, and other software. I can also help with platform moves when the current setup is getting in the way.',
+      'Yes. I handle payments, email tools, CRM systems, customer accounts, and other software connections. I can also help with platform moves when the current setup is getting in the way.',
   },
   {
     question: 'Do I need a full plan before reaching out?',
     answer:
-      'No. A short message is enough. If you can tell me the problem, the goal, or what feels stuck, that is enough for me to point you in the right direction.',
+      'No. A short message is enough. If you can explain the problem or the goal, I can help you sort out the next step.',
   },
 ] as const;

@@ -7,7 +7,6 @@ import { TechStack } from '@/components/tech-stack';
 import { CaseStudies } from '@/components/case-studies';
 import { About } from '@/components/about';
 import { Process } from '@/components/process';
-import { Testimonials } from '@/components/testimonials';
 import { Faq } from '@/components/faq';
 import { Schedule } from '@/components/schedule';
 import { Contact } from '@/components/contact';
@@ -59,7 +58,6 @@ export default function Home() {
         <Hero />
         <Services />
         <CaseStudies />
-        <Testimonials />
         <PostLaunchSupport />
         <About />
         <TechStack />

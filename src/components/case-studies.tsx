@@ -35,16 +35,15 @@ const caseStudies: CaseStudy[] = [
     tag: 'Team Operations',
     num: '01',
     title: 'Customer Portal for Messaging and Billing',
-    role: 'Planned, designed, and built the full system',
+    role: 'Led planning and build',
     period: '2024 to Present',
     description:
-      'Built a secure online area that brought messages, account access, and billing into one place.',
+      'Built a secure online area that brought messaging, account access, and billing into one place.',
     outcomes: [
-      'Made it easier for staff and customers to keep communication in one place',
-      'Reduced back-and-forth and repetitive office work',
-      'Let customers view accounts and handle billing in the same space',
-      'Kept the right information visible to the right people',
-      'Made everyday account management easier for the team',
+      'Centralized customer communication and billing',
+      'Reduced back-and-forth for staff',
+      'Let customers manage accounts in one place',
+      'Kept sensitive information visible to the right people',
     ],
     included: [
       'Secure messaging',
@@ -60,13 +59,13 @@ const caseStudies: CaseStudy[] = [
     tag: 'Online Store',
     num: '02',
     title: 'Store Recovery and Growth Support',
-    role: 'Stepped in to fix and improve an existing store',
+    role: 'Stepped in to stabilize and improve an existing store',
     period: '2024',
     description:
-      'Stepped into an online store that was losing sales because of speed and checkout issues, then fixed the key problems so the business could keep growing.',
+      'Fixed the speed and checkout issues that were costing an existing store sales.',
     outcomes: [
       'Removed checkout problems that were blocking sales',
-      'Improved site speed so more shoppers could complete purchases',
+      'Improved speed across key shopping flows',
       'Set up clearer marketing and sales reporting',
       'Added wholesale and partner-friendly features',
       'Made the store easier to manage day to day',
@@ -90,11 +89,11 @@ const caseStudies: CaseStudy[] = [
     description:
       'Built a web tool that helped people narrow their options and get to the right choice faster.',
     outcomes: [
-      'Moved the idea from planning to live launch',
+      'Moved the idea from concept to launch',
       'Created a clearer step-by-step search experience',
-      'Made the experience more reliable when people entered the wrong information',
+      'Handled bad or incomplete inputs more reliably',
       'Made it work cleanly across phone, tablet, and desktop',
-      'Left the product easy to update and expand over time',
+      'Left the product easy to update over time',
     ],
     included: [
       'Search flow',
@@ -127,8 +126,8 @@ export function CaseStudies() {
               Recent Client Work
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              A few examples of work that helped businesses sell more, serve
-              customers better, or make day-to-day work easier.
+              A few examples of projects that improved sales, customer
+              experience, or day-to-day operations.
             </p>
           </div>
         </FadeUp>

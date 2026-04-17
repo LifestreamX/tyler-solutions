@@ -6,9 +6,7 @@ import {
   BarChart3,
   Accessibility,
   Shield,
-  MapPin,
   Gauge,
-  ScanSearch,
   MousePointerClick,
 } from 'lucide-react';
 import { trackBookCallClick } from '@/lib/analytics';
@@ -18,19 +16,18 @@ const gaps = [
     icon: Search,
     title: 'Search Visibility and Google Basics',
     description:
-      'Make sure people can find the site and that Google can understand it properly.',
+      'Make sure the site can be found and that Google understands the important pages.',
   },
   {
     icon: BarChart3,
     title: 'Analytics and Lead Tracking',
     description:
-      'See where inquiries come from, what people are clicking, and where they stop before contacting you or buying.',
+      'See where inquiries come from, what people click, and where they drop off.',
   },
   {
     icon: Accessibility,
     title: 'Accessibility and Easier Site Use',
-    description:
-      'Make the site easier for more people to use and reduce problems that can hurt trust or create risk.',
+    description: 'Reduce friction for visitors and lower avoidable risk.',
   },
   {
     icon: Shield,
@@ -39,26 +36,13 @@ const gaps = [
       'Keep updates, backups, and routine maintenance handled so the site stays dependable.',
   },
   {
-    icon: MapPin,
-    title: 'Local Search and Google Business Profile',
-    description:
-      'Important for local service businesses that need to show up in maps, reviews, and nearby searches.',
-  },
-  {
     icon: Gauge,
     title: 'Page Speed and Performance',
-    description:
-      'Keep pages fast as more content, images, and tools get added over time.',
-  },
-  {
-    icon: ScanSearch,
-    title: 'Better Google Listings',
-    description:
-      'Help Google show more useful details like services, FAQs, reviews, and other helpful information.',
+    description: 'Keep the site fast as content, tools, and traffic grow.',
   },
   {
     icon: MousePointerClick,
-    title: 'More Leads from the Same Traffic',
+    title: 'Conversion Improvements',
     description:
       'Improve calls to action, forms, and page flow so more of the right visitors reach out.',
   },
@@ -82,9 +66,8 @@ export function PostLaunchSupport() {
               What Often Gets Missed After Launch
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
-              A site can be live and still leave money and time on the table.
-              Search visibility, lead tracking, speed, and routine upkeep are
-              usually where things start slipping.
+              A site can be live and still underperform. Search visibility,
+              tracking, speed, and upkeep are usually the first things to slip.
             </p>
           </div>
         </FadeUp>
@@ -115,8 +98,8 @@ export function PostLaunchSupport() {
             <div className='flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between'>
               <div className='max-w-3xl'>
                 <p className='text-sm leading-relaxed text-muted-foreground'>
-                  If your site is already live, I can review it, tell you what
-                  matters first, and help fix the issues holding it back.
+                  If your site is already live, I can review it, prioritize the
+                  issues, and fix the ones that matter first.
                 </p>
               </div>
               <a

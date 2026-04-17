@@ -8,17 +8,8 @@ import {
   trackMobileMenuToggle,
   trackBookCallClick,
 } from '@/lib/analytics';
+import { PRIMARY_NAV_LINKS } from '@/lib/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
-
-const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#work', label: 'Recent Work' },
-  { href: '#after-launch', label: 'Site Review' },
-  { href: '#about', label: 'About' },
-  { href: '#stack', label: 'Capabilities' },
-  { href: '#process', label: 'Process' },
-  { href: '#contact', label: 'Contact' },
-];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -98,7 +89,7 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className='hidden md:flex items-center gap-6'>
-            {navLinks.map((link) => (
+            {PRIMARY_NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -153,7 +144,7 @@ export function Navbar() {
             aria-label='Mobile navigation menu'
           >
             <nav className='flex flex-col flex-1 px-6 pt-8 pb-12'>
-              {navLinks.map((link) => (
+              {PRIMARY_NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}

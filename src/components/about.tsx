@@ -5,17 +5,17 @@ import { FadeUp, StaggerContainer, ScaleIn } from '@/lib/motion';
 import { BriefcaseBusiness, CheckSquare } from 'lucide-react';
 
 const promises = [
-  'Plain-English communication from start to finish',
-  'Regular updates while the work is moving',
-  'A clear plan and price before work starts',
-  'Work your business can keep using after launch',
+  'Direct, jargon-free communication',
+  'Regular progress updates',
+  'Clear scope, price, and next steps',
+  'Something your business can keep using after launch',
 ];
 
 const goodFit = [
-  'You want one person handling the work from start to finish',
-  'Your current site or store needs improvements before a full rebuild',
-  'Your team is wasting time in emails, spreadsheets, or disconnected tools',
-  'You want clear advice instead of technical explanations',
+  'You want one person accountable for the work',
+  'Your current site or store needs focused improvements before a rebuild',
+  'Your team is losing time to manual work or disconnected tools',
+  'You want straightforward advice, not technical jargon',
 ];
 
 export function About() {
@@ -50,27 +50,26 @@ export function About() {
                 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6'
               >
                 <span className='block'>You Work With Me Directly</span>
-                <span className='block text-accent'>From First Call to Launch.</span>
+                <span className='block text-accent'>
+                  No Layers or Hand-Offs.
+                </span>
               </h2>
               <div className='space-y-5 text-muted-foreground leading-relaxed text-sm lg:text-base'>
                 <p>
-                  I work directly with business owners who need a new website, a
-                  better online store, a secure customer area, or a custom tool
-                  that saves time. I handle the planning, design, build, and
-                  launch so the work stays clear and keeps moving.
+                  I work directly with business owners who need a stronger
+                  website, a better store, a secure customer area, or a tool
+                  that saves time. I handle the planning, build, and launch so
+                  the work stays clear and accountable.
                 </p>
                 <p>
-                  I&apos;ve worked across service businesses, online stores,
-                  healthcare and other privacy-sensitive workflows,
-                  subscriptions, internal tools, automations, and after-launch
-                  improvements. That range helps me connect what customers see
-                  with what your team has to manage behind the scenes.
+                  My background includes service businesses, online stores,
+                  subscriptions, privacy-sensitive workflows, automations, and
+                  internal tools. That range helps me connect what customers see
+                  with what your team needs behind the scenes.
                 </p>
                 <p>
-                  People usually come to me because they want straight answers,
-                  practical advice, and one person responsible for the work. No
-                  agency layers, no hand-offs, and no guessing about who is
-                  doing what.
+                  If you want straightforward advice and one person responsible
+                  for the work, that is usually where I fit best.
                 </p>
               </div>
             </FadeUp>

@@ -49,8 +49,8 @@ const contactInfo = [
 
 const nextSteps = [
   'I read every message myself',
-  'I reply with what I would recommend next',
-  'If it looks like a fit, I outline scope, timing, and the next step',
+  'I reply with the best next step',
+  'If it makes sense, I send scope, timing, and price',
 ];
 
 export function Contact() {
@@ -149,10 +149,9 @@ export function Contact() {
                 </span>
               </h2>
               <p className='text-muted-foreground leading-relaxed mb-10'>
-                If you need a new website, help with the one you already have,
-                better online sales, secure customer areas, or a tool for your
-                team, send over the details. I&apos;ll review it and tell you
-                what I&apos;d recommend next.
+                Need a new website, a better store, a secure customer area, or a
+                fix to something already live? Send the details and I&apos;ll
+                tell you what I&apos;d recommend next.
               </p>
               <p className='mb-8 text-sm leading-relaxed text-muted-foreground'>
                 If you only have the basics, that is enough. Send them here, or{' '}
@@ -161,7 +160,7 @@ export function Contact() {
                   onClick={() => trackBookCallClick('contact_intro')}
                   className='font-semibold text-foreground underline decoration-accent underline-offset-4 transition-colors hover:text-accent'
                 >
-                  book a call if talking it through would be easier
+                  book a call if that is easier
                 </a>
                 .
               </p>
@@ -240,8 +239,8 @@ export function Contact() {
                     className='rounded border border-border bg-background px-4 py-3'
                   >
                     <p className='text-sm leading-relaxed text-muted-foreground'>
-                      Share the goal, what is currently blocked, and any links
-                      or deadlines that matter.
+                      Share the goal, what is blocked, and any links or
+                      deadlines that matter.
                     </p>
                   </div>
 
