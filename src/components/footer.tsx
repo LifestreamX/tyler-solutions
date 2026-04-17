@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react';
 import { PRIMARY_NAV_LINKS } from '@/lib/navigation';
+import { BrandLogo } from '@/components/brand-logo';
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -46,12 +47,10 @@ export function Footer() {
           <div>
             <a
               href='#'
-              className='inline-flex min-h-11 items-center gap-2 text-foreground transition-colors hover:text-accent'
-              aria-label='Tyler Allen Solutions, back to top'
+              className='inline-flex min-h-11 items-center transition-opacity hover:opacity-90'
+              aria-label='Tyler Allen, back to top'
             >
-              <span className='font-bold text-foreground tracking-tight'>
-                Tyler Allen Solutions
-              </span>
+              <BrandLogo />
             </a>
             <p className='text-xs text-muted-foreground mt-2 max-w-xs leading-relaxed'>
               Websites, stores, secure customer areas, internal tools, and

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { BrandLogo } from '@/components/brand-logo';
 import {
   trackNavClick,
   trackMobileMenuToggle,
@@ -75,16 +76,16 @@ export function Navbar() {
     <>
       <header className='fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-md supports-backdrop-filter:bg-background/80'>
         <nav
-          className='max-w-7xl mx-auto px-6 lg:px-8 h-14 flex items-center justify-between'
+          className='max-w-7xl mx-auto flex h-20 items-center justify-between px-6 lg:px-8'
           aria-label='Main navigation'
         >
           {/* Logo */}
           <a
             href='#'
-            aria-label='Tyler Allen Solutions, back to top'
-            className='inline-flex min-h-11 items-center text-foreground font-bold tracking-tight transition-colors hover:text-accent'
+            aria-label='Tyler Allen, back to top'
+            className='inline-flex min-h-11 items-center transition-opacity hover:opacity-90'
           >
-            Tyler Allen Solutions
+            <BrandLogo priority />
           </a>
 
           {/* Desktop Nav */}
@@ -138,7 +139,7 @@ export function Navbar() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             id='mobile-navigation'
-            className='md:hidden fixed inset-0 z-40 flex flex-col overflow-y-auto bg-background/98 pt-14 backdrop-blur-xl'
+            className='md:hidden fixed inset-0 z-40 flex flex-col overflow-y-auto bg-background/98 pt-20 backdrop-blur-xl'
             aria-modal='true'
             role='dialog'
             aria-label='Mobile navigation menu'

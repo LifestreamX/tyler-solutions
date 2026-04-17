@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const alt =
-  'Tyler Allen Solutions websites, store help, secure customer areas, and business tools';
+  'Tyler Allen websites, store help, secure customer areas, and business tools';
 
 export const size = {
   width: 1200,
@@ -60,7 +60,7 @@ export default function OpenGraphImage() {
               width: 12,
             }}
           />
-          Websites, Stores, and Support
+          Practical Web Solutions
         </div>
 
         <div

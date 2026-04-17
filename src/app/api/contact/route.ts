@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const DEFAULT_RESEND_FROM = 'Tyler Allen Solutions <contact@tyler-allen.com>';
+const DEFAULT_RESEND_FROM = 'Tyler Allen <contact@tyler-allen.com>';
 const VERIFIED_SENDER_DOMAIN = 'tyler-allen.com';
 
 function escapeHtml(value: string) {

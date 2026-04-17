@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id='hero'
-      className='relative flex min-h-svh items-center justify-center overflow-hidden bg-background pt-14'
+      className='relative flex min-h-svh items-center justify-center overflow-hidden bg-background pt-20'
       aria-labelledby='hero-heading'
     >
       {/* Dot-matrix background */}

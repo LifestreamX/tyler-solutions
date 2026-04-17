@@ -384,7 +384,7 @@ export function Contact() {
                   <button
                     type='submit'
                     disabled={isSubmitting}
-                    className='btn-accent group inline-flex min-h-11 w-full items-center justify-center gap-2 rounded px-8 py-4 text-sm font-semibold text-accent-foreground disabled:opacity-50 disabled:cursor-not-allowed'
+                    className='btn-accent group inline-flex min-h-11 w-full cursor-pointer items-center justify-center gap-2 rounded px-8 py-4 text-sm font-semibold text-accent-foreground transition-all hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-50'
                   >
                     {isSubmitting ? (
                       <>

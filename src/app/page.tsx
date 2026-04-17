@@ -14,7 +14,7 @@ import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Tyler Allen Solutions | Websites and Business Tools',
+    absolute: 'Tyler Allen | Practical Web Solutions',
   },
   description:
     'Websites, online stores, secure customer areas, and custom tools for businesses that want better sales, smoother operations, and dependable support after launch.',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Tyler Allen Solutions | Websites and Business Tools',
+    title: 'Tyler Allen | Practical Web Solutions',
     description:
       'Tyler Allen helps businesses launch websites, improve online stores, add secure customer areas, and fix the things that get missed after launch.',
     url: '/',
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Tyler Allen Solutions websites, store help, secure customer areas, and business tools',
+        alt: 'Tyler Allen websites, store help, secure customer areas, and business tools',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tyler Allen Solutions | Websites and Business Tools',
+    title: 'Tyler Allen | Practical Web Solutions',
     description:
       'Websites, store help, secure customer areas, and business tools with dependable support after launch.',
     images: ['/twitter-image'],

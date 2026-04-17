@@ -140,7 +140,7 @@ export function Schedule() {
                   <div className='overflow-x-auto border-y border-border bg-card sm:overflow-hidden sm:rounded sm:border'>
                     <CalendlyEmbed
                       url={calendlyEmbedUrl}
-                      title='Schedule a call with Tyler Allen Solutions on Calendly'
+                      title='Schedule a call with Tyler Allen on Calendly'
                       className='h-190 min-w-[320px] lg:h-205'
                     />
                   </div>
