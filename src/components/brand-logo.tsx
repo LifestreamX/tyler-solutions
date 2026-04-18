@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const BRAND_LOGO_SRC = '/brand-logo.png?v=20260417-1';
+const BRAND_LOGO_SRC = '/brand-logo.png?v=20260418-1';
 const BRAND_LOGO_STYLES = {
   container: 'h-12 w-[300px] sm:h-[52px] sm:w-[340px] lg:h-14 lg:w-[380px]',
   sizes: '(min-width: 1024px) 380px, (min-width: 640px) 340px, 300px',
@@ -20,7 +20,7 @@ export function BrandLogo({ priority = false }: BrandLogoProps) {
         sizes={BRAND_LOGO_STYLES.sizes}
         priority={priority}
         unoptimized
-        className='object-contain'
+        className='object-contain object-left md:object-center'
       />
     </div>
   );
