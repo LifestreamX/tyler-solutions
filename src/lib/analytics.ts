@@ -186,19 +186,15 @@ export function trackOutboundClick(destination: string, label: string) {
   });
 }
 
-/** Email link click. */
-export function trackEmailClick(source: string) {
-  gtagCall('event', 'contact_email_click', {
+/** Contact detail copied to clipboard. */
+export function trackContactCopy(
+  contactMethod: 'email' | 'phone',
+  source: string,
+) {
+  gtagCall('event', 'contact_detail_copy', {
     event_category: 'Contact',
-    event_label: `email_from_${source}`,
-  });
-}
-
-/** Phone link click. */
-export function trackPhoneClick(source: string) {
-  gtagCall('event', 'contact_phone_click', {
-    event_category: 'Contact',
-    event_label: `phone_from_${source}`,
+    event_label: `${contactMethod}_copied_from_${source}`,
+    contact_method: contactMethod,
   });
 }
 

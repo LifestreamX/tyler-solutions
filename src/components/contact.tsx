@@ -4,16 +4,15 @@ import { FadeUp } from '@/lib/motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Send, CheckCircle, Mail, Phone } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { Send, Check, CheckCircle, Copy, Mail, Phone } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import {
   trackFormStart,
   trackFormSubmit,
   trackFormSubmitFailure,
   trackFormError,
   trackBookCallClick,
-  trackEmailClick,
-  trackPhoneClick,
+  trackContactCopy,
 } from '@/lib/analytics';
 
 const contactSchema = z.object({
@@ -35,15 +34,15 @@ const contactInfo = [
     icon: Mail,
     label: 'Email',
     value: 'solutions.tylerallen@gmail.com',
-    href: 'mailto:solutions.tylerallen@gmail.com',
-    onClick: () => trackEmailClick('contact_section'),
+    copyValue: 'solutions.tylerallen@gmail.com',
+    onCopy: () => trackContactCopy('email', 'contact_section'),
   },
   {
     icon: Phone,
     label: 'Phone',
     value: '(774) 279-1607',
-    href: 'tel:+17742791607',
-    onClick: () => trackPhoneClick('contact_section'),
+    copyValue: '(774) 279-1607',
+    onCopy: () => trackContactCopy('phone', 'contact_section'),
   },
 ];
 
@@ -55,8 +54,10 @@ const nextSteps = [
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [copiedLabel, setCopiedLabel] = useState<string | null>(null);
   const formStarted = useRef(false);
   const formStartedAt = useRef<number | null>(null);
+  const copiedResetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const {
     register,
@@ -75,6 +76,34 @@ export function Contact() {
   }
 
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (copiedResetTimer.current !== null) {
+        clearTimeout(copiedResetTimer.current);
+      }
+    };
+  }, []);
+
+  async function handleCopy(value: string, label: string, onCopy: () => void) {
+    try {
+      await navigator.clipboard.writeText(value);
+      onCopy();
+      setCopiedLabel(label);
+
+      if (copiedResetTimer.current !== null) {
+        clearTimeout(copiedResetTimer.current);
+      }
+
+      copiedResetTimer.current = setTimeout(() => {
+        setCopiedLabel((currentLabel) =>
+          currentLabel === label ? null : currentLabel,
+        );
+      }, 2000);
+    } catch {
+      setCopiedLabel(null);
+    }
+  }
 
   const onSubmit = async (data: ContactFormData) => {
     setSubmitError(null);
@@ -185,26 +214,46 @@ export function Contact() {
               {/* Contact details */}
               <div className='space-y-3'>
                 {contactInfo.map((item) => (
-                  <a
+                  <button
                     key={item.label}
-                    href={item.href}
-                    onClick={item.onClick}
-                    aria-label={`${item.label}: ${item.value}`}
-                    className='group flex min-h-11 items-center gap-4 rounded border border-border bg-surface p-4 sm:p-5 shadow-sm transition-all duration-300 hover:-translate-y-px hover:border-accent/30 hover:shadow-md dark:shadow-none dark:hover:shadow-none'
+                    type='button'
+                    onClick={() =>
+                      void handleCopy(item.copyValue, item.label, item.onCopy)
+                    }
+                    aria-label={`Copy ${item.label.toLowerCase()} to clipboard`}
+                    className='group flex min-h-11 w-full cursor-pointer flex-col gap-3 rounded-xl border border-border bg-surface p-4 text-left shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-card hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background dark:shadow-none dark:hover:shadow-none sm:flex-row sm:items-center sm:justify-between sm:p-5'
                   >
-                    <div className='p-2 bg-card border border-border rounded shrink-0'>
-                      <item.icon className='h-4 w-4 text-accent' />
+                    <div className='flex min-w-0 items-center gap-4'>
+                      <div className='shrink-0 rounded-lg border border-border bg-background p-2.5 transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/5'>
+                        <item.icon className='h-4 w-4 text-accent transition-transform duration-300 group-hover:scale-105' />
+                      </div>
+                      <div className='min-w-0'>
+                        <p className='mb-0.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground'>
+                          {item.label}
+                        </p>
+                        <span className='block break-all text-sm font-medium text-foreground transition-colors duration-300 group-hover:text-accent sm:break-normal'>
+                          {item.value}
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <p className='font-mono text-[10px] text-muted-foreground uppercase tracking-widest mb-0.5'>
-                        {item.label}
-                      </p>
-                      <span className='text-sm font-medium text-foreground transition-colors group-hover:text-accent'>
-                        {item.value}
-                      </span>
-                    </div>
-                  </a>
+                    <span
+                      aria-hidden='true'
+                      className='inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full border border-border bg-background/80 px-4 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground transition-all duration-300 group-hover:border-accent/40 group-hover:text-foreground'
+                    >
+                      {copiedLabel === item.label ? (
+                        <Check className='h-4 w-4' />
+                      ) : (
+                        <Copy className='h-4 w-4' />
+                      )}
+                      {copiedLabel === item.label
+                        ? 'Copied'
+                        : `Copy ${item.label}`}
+                    </span>
+                  </button>
                 ))}
+                <p className='sr-only' aria-live='polite'>
+                  {copiedLabel ? `${copiedLabel} copied to clipboard.` : ''}
+                </p>
               </div>
             </div>
           </FadeUp>
