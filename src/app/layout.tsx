@@ -106,7 +106,7 @@ const jsonLd = {
       '@id': 'https://solutions.tyler-allen.com/#person',
       name: 'Tyler Allen',
       url: 'https://solutions.tyler-allen.com',
-      email: 'tylerallen@live.com',
+      email: 'solutions.tylerallen@gmail.com',
       telephone: '+17742791607',
       jobTitle: 'Website and Business Systems Partner',
       image: 'https://solutions.tyler-allen.com/tyler.jpeg',
@@ -125,7 +125,7 @@ const jsonLd = {
         {
           '@type': 'ContactPoint',
           contactType: 'customer support',
-          email: 'tylerallen@live.com',
+          email: 'solutions.tylerallen@gmail.com',
           telephone: '+17742791607',
           areaServed: 'US',
           availableLanguage: ['English'],

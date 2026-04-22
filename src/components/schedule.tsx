@@ -5,7 +5,7 @@ import { CalendlyEmbed } from '@/components/calendly-embed';
 import { trackBookCallClick, trackCtaClick } from '@/lib/analytics';
 import { FadeUp } from '@/lib/motion';
 
-const DEFAULT_CALENDLY_URL = 'https://calendly.com/tylerallen-plmq/30min';
+const DEFAULT_CALENDLY_URL = 'https://calendly.com/solutions-tylerallen/30min';
 
 const scheduleHighlights = [
   {

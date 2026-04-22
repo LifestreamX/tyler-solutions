@@ -34,8 +34,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'tylerallen@live.com',
-    href: 'mailto:tylerallen@live.com',
+    value: 'solutions.tylerallen@gmail.com',
+    href: 'mailto:solutions.tylerallen@gmail.com',
     onClick: () => trackEmailClick('contact_section'),
   },
   {

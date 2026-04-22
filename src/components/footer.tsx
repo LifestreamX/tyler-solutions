@@ -35,7 +35,11 @@ const socialLinks = [
     href: 'https://linkedin.com/in/tylerallen1',
     icon: LinkedinIcon,
   },
-  { label: 'Email', href: 'mailto:tylerallen@live.com', icon: Mail },
+  {
+    label: 'Email',
+    href: 'mailto:solutions.tylerallen@gmail.com',
+    icon: Mail,
+  },
 ];
 
 export function Footer() {
