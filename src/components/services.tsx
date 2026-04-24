@@ -22,11 +22,12 @@ const services = [
     tag: '02',
     title: 'Fixes, Updates, and Conversion Improvements',
     description:
-      'I improve the parts of an existing site that are costing you leads, sales, or time.',
+      'I improve the parts of an existing site that are costing you leads, sales, time, or avoidable risk.',
     features: [
       'Design refreshes and content updates',
       'Fixes for slow pages, broken forms, and checkout problems',
       'Tracking and reports so you can see what is working',
+      'Reviews for outdated plugins, weak setups, and common security gaps',
       'Moves to a better platform if the current setup is holding you back',
     ],
   },
@@ -53,7 +54,7 @@ const alsoAvailable = [
   'Platform migrations',
   'Speed improvements',
   'Accessibility improvements',
-  'Maintenance and security',
+  'Security reviews and maintenance',
   'Shopify and WordPress support',
 ];
 
@@ -77,7 +78,8 @@ export function Services() {
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
               Some projects need a new site. Others need a cleaner checkout, a
-              secure client area, or a focused fix to something already live.
+              secure client area, or a focused fix to something already live,
+              including security and maintenance cleanup.
             </p>
           </div>
         </FadeUp>

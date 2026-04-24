@@ -25,6 +25,11 @@ export const faqItems = [
       'Yes. I handle payments, email tools, CRM systems, customer accounts, and other software connections. I can also help with platform moves when the current setup is getting in the way.',
   },
   {
+    question: 'Can you help make our website or internal tool more secure?',
+    answer:
+      'Yes. I build with practical security best practices in mind and can review common risk areas like outdated plugins, account access, permissions, form handling, backups, and third-party integrations. I do not position this as a full security audit, but I do help reduce avoidable risk and tighten the setup around the parts your business depends on.',
+  },
+  {
     question: 'Do I need a full plan before reaching out?',
     answer:
       'No. A short message is enough. If you can explain the problem or the goal, I can help you sort out the next step.',

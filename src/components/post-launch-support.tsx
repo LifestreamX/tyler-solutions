@@ -33,7 +33,7 @@ const gaps = [
     icon: Shield,
     title: 'Security, Updates, and Backups',
     description:
-      'Keep updates, backups, and routine maintenance handled so the site stays dependable.',
+      'Keep updates, backups, access settings, and common security gaps handled so the site stays dependable.',
   },
   {
     icon: Gauge,
@@ -67,7 +67,8 @@ export function PostLaunchSupport() {
             </h2>
             <p className='text-muted-foreground leading-relaxed'>
               A site can be live and still underperform. Search visibility,
-              tracking, speed, and upkeep are usually the first things to slip.
+              tracking, speed, upkeep, and security basics are usually the first
+              things to slip.
             </p>
           </div>
         </FadeUp>
@@ -99,7 +100,8 @@ export function PostLaunchSupport() {
               <div className='max-w-3xl'>
                 <p className='text-sm leading-relaxed text-muted-foreground'>
                   If your site is already live, I can review it, prioritize the
-                  issues, and fix the ones that matter first.
+                  issues, and fix the ones that matter first, including
+                  security, speed, and tracking gaps.
                 </p>
               </div>
               <a
